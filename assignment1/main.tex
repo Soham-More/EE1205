@@ -82,8 +82,7 @@ Substituting Values,
     \therefore n = 13
 \end{gather*}
 Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\[ x(n) = a_1r^{n - 1}
-\]
+\[ x(n) = a_1r^{n - 1}u[n] \]
 Taking the Z - transform:
 \begin{gather*}
     X(z) = \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
@@ -116,15 +115,9 @@ Substituting Values,
     \therefore n = 12
 \end{gather*}
 Thus the $12^{th}$ term of the G.P $b_n$ is 729.
-
-\[ x(n) = \begin{cases} 
-      0 & n\leq 0 \\
-      b_1r^{n - 1} & n\geq 1  
-   \end{cases}
-\]
-
+\[ x(n) = b_1r^{n - 1}u[n] \]
 Using the previous result, the Z-transform of x(n):
-\[X(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\forall { |z| > \sqrt{3}}\]
+\[X(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\forall { \abs{z} > \sqrt{3}}\]
 
 
 (c) Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
@@ -145,17 +138,11 @@ Substituting Values,
     \therefore n = 9
 \end{gather*}
 Thus the $9^{th}$ term of the G.P $c_n$ is $\frac{1}{19683}$.
-
-\[ x(n) = \begin{cases} 
-      0 & n\leq 0 \\
-      c_1r^{n - 1} & n\geq 1  
-   \end{cases}
-\]
-
+\[ x(n) = c_1r^{n - 1}u[n] \]
 Using the previous result, the Z-transform of x(n):
 \[
     X(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
-    \implies X(z) = \frac{1 }{3z - 1}\forall { |z| > \frac{1}{3}}
+    \implies X(z) = \frac{1 }{3z - 1}\forall { \abs{z} > \frac{1}{3}}
 \]
 
 \end{document}
