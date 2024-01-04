@@ -46,7 +46,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{NCERT 11.9.3}
+\title{NCERT 11.9.3} % TODO: change wrong problem number
 \author{ee23btech11223 - Soham Prabhakar More% <-this % stops a space
 }
 \maketitle
@@ -81,7 +81,25 @@ Substituting Values,
     \implies n - 1 = 12\\
     \therefore n = 13
 \end{gather*}
-Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\
+Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
+\[ x(n) = \begin{cases} 
+      0 & n\leq 0 \\
+      a_1r^{n - 1} & n\geq 1  
+   \end{cases}
+\]
+Taking the Z - transform:
+\begin{gather*}
+    X(z) = \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
+    \implies X(z) = \sum_{n = 1}^{\infty}{a_1r^{n - 1}z^{-n}}\\
+    \implies X(z) = \frac{a_1}{r}\sum_{n = 1}^{\infty}{r^n z^{-n}}\\
+    \implies X(z) = \frac{a_1}{r}(\sum_{n = 0}^{\infty}{r^n z^{-n}} - 1)\\
+\end{gather*}
+\begin{gather*}
+    \implies X(z) = \frac{a_1}{r}(\frac{1}{1 - \frac{r}{z}} - 1)\\
+    \implies X(z) = \frac{a_1}{r}(\frac{z}{z - r} - 1)\\
+    \therefore X(z) = \frac{a_1}{z - r}\forall { |z| > |r|}\\
+    \therefore X(z) = \frac{2}{z - \sqrt{2}}\forall { |z| > \sqrt{2}}
+\end{gather*}
 
 (b) Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
 Since $\frac{b_2}{b_1} = \frac{b_3}{b_2}$, the sequence $b_1, b_2, b_3$ is a G.P Series.
@@ -102,6 +120,16 @@ Substituting Values,
 \end{gather*}
 Thus the $12^{th}$ term of the G.P $b_n$ is 729.
 
+\[ x(n) = \begin{cases} 
+      0 & n\leq 0 \\
+      b_1r^{n - 1} & n\geq 1  
+   \end{cases}
+\]
+
+Using the previous result, the Z-transform of x(n):
+\[X(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\forall { |z| > \sqrt{3}}\]
+
+
 (c) Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
 Since $\frac{c_2}{c_1} = \frac{c_3}{c_2}$, the sequence $c_1, c_2, c_3$ is a G.P Series.
 Let $r = \frac{c_2}{c_2} = \frac{1}{3}$, then the general term is $c_n = c_1 r^{n-1}$.\\
@@ -120,5 +148,18 @@ Substituting Values,
     \therefore n = 9
 \end{gather*}
 Thus the $9^{th}$ term of the G.P $c_n$ is $\frac{1}{19683}$.
+
+\[ x(n) = \begin{cases} 
+      0 & n\leq 0 \\
+      c_1r^{n - 1} & n\geq 1  
+   \end{cases}
+\]
+
+Using the previous result, the Z-transform of x(n):
+\[
+    X(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
+    \implies X(z) = \frac{1 }{3z - 1}\forall { |z| > \frac{1}{3}}
+\]
+
 \end{document}
 
