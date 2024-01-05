@@ -28,6 +28,7 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage[center]{caption} % center the captions to figure
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -82,7 +83,7 @@ Substituting Values,
     \therefore n = 13
 \end{gather*}
 Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\[ x(n) = a_1r^{n - 1}u[n] \]
+\[ x(n) = a_1r^{n - 1}u[n]\ref{fig:img1} \] where $u[0] = 0$.
 Taking the Z - transform:
 \begin{gather*}
     X(z) = \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
@@ -144,6 +145,27 @@ Using the previous result, the Z-transform of x(n):
     X(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
     \implies X(z) = \frac{1 }{3z - 1}\forall { \abs{z} > \frac{1}{3}}
 \]
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/a.png}
+    \caption{Plot of $x_a$(n) from n = -6 to 6}
+    \label{fig:img1}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/b.png}
+    \caption{Plot of $x_b$(n)}
+    \label{fig:img2}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/c.png}
+    \caption{Plot of $x_c$(n)}
+    \label{fig:img3}
+\end{figure*}
 
 \end{document}
 
