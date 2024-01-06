@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1704540035 "/home/sanji/Uni/EE1205/assignment1/main.tex" "main.pdf" "main" 1704540036
+["pdflatex"] 1704540191 "/home/sanji/Uni/EE1205/assignment1/main.tex" "main.pdf" "main" 1704540192
   "/etc/texmf/web2c/texmf.cnf" 1704303216 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/sanji/Uni/EE1205/assignment1/main.tex" 1704540034 5726 d51dc6db3f17f89735b569a454cc38fd ""
+  "/home/sanji/Uni/EE1205/assignment1/main.tex" 1704540191 5738 265de511d93808dbc112074995a4004f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -255,9 +255,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1704303290 2801001 5b0f87676a1c302c427c0e61ce755f99 ""
   "figs/a.png" 1704539986 19000 9312eb7cb7dd0a8785d5f178ea41720d ""
   "gvv.sty" 1704358602 5178 c355d3f45ac8ab8a2525839746a2ca97 ""
-  "main.aux" 1704540036 883 8d1ac17f1adf14f4cb270339085829db "pdflatex"
-  "main.out" 1704540036 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1704540034 5726 d51dc6db3f17f89735b569a454cc38fd ""
+  "main.aux" 1704540192 883 8d1ac17f1adf14f4cb270339085829db "pdflatex"
+  "main.out" 1704540191 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1704540191 5738 265de511d93808dbc112074995a4004f ""
   (generated)
   "main.aux"
   "main.log"
