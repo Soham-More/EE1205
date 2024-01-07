@@ -83,7 +83,7 @@ Substituting Values,
     \therefore n = 13
 \end{gather*}
 Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\[ x_a(n) = a_1r^{n - 1}u[n] \] where $u[0] = 0$.
+\[ x(n) = a_1r^{n - 1}u[n] \] where $u[0] = 0$.
 Taking the Z - transform:
 \begin{gather*}
     X(z) = \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
@@ -96,7 +96,7 @@ Taking the Z - transform:
     \implies X(z) = \frac{a_1}{r}(\frac{z}{z - r} - 1)\\
     \therefore X(z) = \frac{a_1}{z - r}\forall { \abs{z} > \abs{r}}\\
 \end{gather*}
-\[\therefore X_a(z) = \frac{2}{z - \sqrt{2}}\forall { \abs{z} > \sqrt{2}}\]
+\[\therefore X(z) = \frac{2}{z - \sqrt{2}}\forall { \abs{z} > \sqrt{2}}\]
 with ROC: \[{ \abs{z} > \sqrt{2}}\]
 
 (b) Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
@@ -117,9 +117,9 @@ Substituting Values,
     \therefore n = 12
 \end{gather*}
 Thus the $12^{th}$ term of the G.P $b_n$ is 729.
-\[ x_v(n) = b_1r^{n - 1}u[n] \]
+\[ x(n) = b_1r^{n - 1}u[n] \]
 Using the previous result, the Z-transform of x(n):
-\[X_b(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\]
+\[X(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\]
 with ROC: \[ \abs{z} > \sqrt{3} \]
 
 (c) Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
@@ -140,10 +140,10 @@ Substituting Values,
     \therefore n = 9
 \end{gather*}
 Thus the $9^{th}$ term of the G.P $c_n$ is $\frac{1}{19683}$.
-\[ x_c(n) = c_1r^{n - 1}u[n] \]
+\[ x(n) = c_1r^{n - 1}u[n] \]
 Using the previous result, the Z-transform of x(n):
 \[
-    X_c(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
+    X(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
     \implies X(z) = \frac{1 }{3z - 1}
 \] with ROC: \[ \abs{z} > \frac{1}{3} \]
 \begin{figure}[h!]
