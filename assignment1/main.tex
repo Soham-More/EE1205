@@ -69,21 +69,21 @@ Which term of the following sequences:\\
 Since, $\frac{a_2}{a_1} = \frac{a_3}{a_2}$, the sequence $a_1, a_2, a_3$ is a G.P Series.
 Let $r = \frac{a_2}{a_2} = \sqrt{2}$, then the general term is $a_n = a_1 r^{n-1}$.\\
 Assume $n^{th}$ term is 128, which gives: 
-\begin{gather*}
-    a_n = a_1 r^{n-1} = 128\\
-    \implies r^{n-1} = \frac{128}{a_1}\\
-    \implies n - 1 = \log_{r}{\frac{128}{a_1}}
-\end{gather*}
+\begin{align}
+    a_n &= a_1 r^{n-1} = 128\\
+    \implies r^{n-1} &= \frac{128}{a_1}\\
+    \implies n - 1 &= \log_{r}{\frac{128}{a_1}}
+\end{align}
 Substituting Values,
-\begin{gather*}
-    \implies n - 1 = \log_{\sqrt{2}}{\frac{128}{2}}\\
-    \implies n - 1 = \log_{\sqrt{2}}{64}\\
-    \implies n - 1 = \log_{\sqrt{2}}{\sqrt{2}^{12}}\\
-    \implies n - 1 = 12\\
-    \therefore n = 13
-\end{gather*}
+\begin{align}
+    \implies n - 1 &= \log_{\sqrt{2}}{\frac{128}{2}}\\
+    \implies n - 1 &= \log_{\sqrt{2}}{64}\\
+    \implies n - 1 &= \log_{\sqrt{2}}{\sqrt{2}^{12}}\\
+    \implies n - 1 &= 12\\
+    \therefore n &= 13
+\end{align}
 Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\[ x(n) = a_1r^{n - 1}u[n] \] where $u[0] = 0$.
+\begin{align}  x_a(n) = a_1r^{n}u[n]  \end{align} where $u[0] = 1$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/a.png}
@@ -91,41 +91,39 @@ Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\
     \label{fig:img1}
 \end{figure}
 Taking the Z - transform:
-\begin{gather*}
-    X(z) = \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
-    \implies X(z) = \sum_{n = 1}^{\infty}{a_1r^{n - 1}z^{-n}}\\
-    \implies X(z) = \frac{a_1}{r}\sum_{n = 1}^{\infty}{r^n z^{-n}}\\
-    \implies X(z) = \frac{a_1}{r}(\sum_{n = 0}^{\infty}{r^n z^{-n}} - 1)\\
-\end{gather*}
-\begin{gather*}
-    \implies X(z) = \frac{a_1}{r}(\frac{1}{1 - \frac{r}{z}} - 1)\\
-    \implies X(z) = \frac{a_1}{r}(\frac{z}{z - r} - 1)\\
-    \therefore X(z) = \frac{a_1}{z - r}\forall { \abs{z} > \abs{r}}\\
-\end{gather*}
-\[\therefore X(z) = \frac{2}{z - \sqrt{2}}\forall { \abs{z} > \sqrt{2}}\]
-with ROC: \[{ \abs{z} > \sqrt{2}}\]
+\begin{align}
+    X(z) &= \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
+    \implies X(z) &= \sum_{n = 0}^{\infty}{a_1r^{n}z^{-n}}\\
+    \implies X(z) &= a_1\sum_{n = 0}^{\infty}{r^n z^{-n}}\\
+    \implies X(z) &= \frac{a_1}{r}(\frac{1}{1 - \frac{r}{z}})\\
+    \therefore X(z) &= \frac{a_1z}{r(z - r)} \forall {\abs{z} > \abs{r}} \label{zresult}
+\end{align}
+\begin{align}
+    \therefore X_a(z) = \frac{\sqrt{2}z}{z - \sqrt{2}}\forall {\abs{z} > \sqrt{2}}
+\end{align}
+with ROC: \[ \abs{z} > \sqrt{2} \]
 
 (b) Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
 Since $\frac{b_2}{b_1} = \frac{b_3}{b_2}$, the sequence $b_1, b_2, b_3$ is a G.P Series.
 Let $r = \frac{b_2}{b_2} = \sqrt{3}$, then the general term is $b_n = b_1 r^{n-1}$.\\
 Assume $n^{th}$ term is 729, which gives: 
-\begin{gather*}
-    b_n = b_1 r^{n-1} = 729\\
-    \implies r^{n-1} = \frac{729}{b_1}\\
-    \implies n - 1 = \log_{r}{\frac{729}{b_1}}
-\end{gather*}
+\begin{align}
+    b_n &= b_1 r^{n-1} = 729\\
+    \implies r^{n-1} &= \frac{729}{b_1}\\
+    \implies n - 1 &= \log_{r}{\frac{729}{b_1}}
+\end{align}
 Substituting Values,
-\begin{gather*}
-    \implies n - 1 = \log_{\sqrt{3}}{\frac{729}{\sqrt{3}}}\\
-    \implies n - 1 = \log_{\sqrt{3}}{\frac{3^6}{\sqrt{3}}}\\
-    \implies n - 1 = \log_{\sqrt{3}}{\sqrt{3}^{11}}\\
-    \implies n - 1 = 11\\
-    \therefore n = 12
-\end{gather*}
+\begin{align}
+    \implies n - 1 &= \log_{\sqrt{3}}{\frac{729}{\sqrt{3}}}\\
+    \implies n - 1 &= \log_{\sqrt{3}}{\frac{3^6}{\sqrt{3}}}\\
+    \implies n - 1 &= \log_{\sqrt{3}}{\sqrt{3}^{11}}\\
+    \implies n - 1 &= 11\\
+    \therefore n &= 12
+\end{align}
 Thus the $12^{th}$ term of the G.P $b_n$ is 729.
-\[ x(n) = b_1r^{n - 1}u[n] \]
-Using the previous result, the Z-transform of x(n):
-\[X(z) = \frac{\sqrt{3}}{z - \sqrt{3}}\]
+\begin{align}  x_b(n) = b_1r^nu[n]  \end{align}
+By \ref{zresult}, the Z-transform of $x_b$(n):
+\begin{align} X_b(z) = \frac{z}{z - \sqrt{3}} \end{align}
 with ROC: \[ \abs{z} > \sqrt{3} \]
 \begin{figure}[h!]
     \centering
@@ -138,26 +136,26 @@ with ROC: \[ \abs{z} > \sqrt{3} \]
 Since $\frac{c_2}{c_1} = \frac{c_3}{c_2}$, the sequence $c_1, c_2, c_3$ is a G.P Series.
 Let $r = \frac{c_2}{c_2} = \frac{1}{3}$, then the general term is $c_n = c_1 r^{n-1}$.\\
 Assume $n^{th}$ term is $\frac{1}{19683}$, which gives: 
-\begin{gather*}
-    c_n = c_1 r^{n-1} = \frac{1}{19683}\\
-    \implies r^{n-1} = \frac{1}{19683 c_1}\\
-    \implies n - 1 = \log_{r}{\frac{1}{19683 c_1}}
-\end{gather*}
+\begin{align}
+    c_n &= c_1 r^{n-1} = \frac{1}{19683}\\
+    \implies r^{n-1} &= \frac{1}{19683 c_1}\\
+    \implies n - 1 &= \log_{r}{\frac{1}{19683 c_1}}
+\end{align}
 Substituting Values,
-\begin{gather*}
-    \implies n - 1 = \log_{\frac{1}{3}}{\frac{1}{19683 \frac{1}{3}}}\\
-    \implies n - 1 = \log_{\frac{1}{3}}{\frac{1}{6561}}\\
-    \implies n - 1 = \log_{\frac{1}{3}}{3^{-8}}\\
-    \implies n - 1 = 8\\
-    \therefore n = 9
-\end{gather*}
+\begin{align}
+    \implies n - 1 &= \log_{\frac{1}{3}}{\frac{1}{19683 \frac{1}{3}}}\\
+    \implies n - 1 &= \log_{\frac{1}{3}}{\frac{1}{6561}}\\
+    \implies n - 1 &= \log_{\frac{1}{3}}{3^{-8}}\\
+    \implies n - 1 &= 8\\
+    \therefore n &= 9
+\end{align}
 Thus the $9^{th}$ term of the G.P $c_n$ is $\frac{1}{19683}$.
-\[ x(n) = c_1r^{n - 1}u[n] \]
+\begin{align}  x_c(n) = c_1r^{n}u[n]  \end{align}
 Using the previous result, the Z-transform of x(n):
-\[
-    X(z) = \frac{\frac{1}{3}}{z - \frac{1}{3}}
-    \implies X(z) = \frac{1 }{3z - 1}
-\] with ROC: \[ \abs{z} > \frac{1}{3} \]
+\begin{align}
+    X(z) = \frac{z}{z - \frac{1}{3}}
+    \implies X(z) = \frac{3z}{3z - 1}
+\end{align} with ROC: \[ \abs{z} > \frac{1}{3} \]
 
 \begin{figure}[h!]
     \centering
@@ -165,6 +163,37 @@ Using the previous result, the Z-transform of x(n):
     Fig. 3: Plot of $x_c$(n) from n = -6 to 6
     \label{fig:img3}
 \end{figure}
+
+\begin{center}
+    \begin{tabular}{ | m{3cm} | m{3cm} | m{3cm} | }
+    \hline
+    Variable & Ezplaination & Values \\
+    \hline
+    r & Common ratio of G.P & $\sqrt{2}$ or $\sqrt{3}$ or $\frac{1}{3}$ \\
+    \hline
+    $a_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+    \hline
+    $b_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+    \hline
+    $c_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+    \hline
+    $x_a(n)$ & Function equivalent of sequence $a_n$ & --- \\
+    \hline 
+    $x_b(n)$ & Function equivalent of sequence $b_n$ & --- \\
+    \hline 
+    $x_c(n)$ & Function equivalent of sequence $c_n$ & --- \\
+    \hline 
+    $X_a(n)$ & Z-transform of $a_n$ & --- \\
+    \hline 
+    $X_b(n)$ & Z-transform of $b_n$ & --- \\
+    \hline 
+    $X_c(n)$ & Z-transform of $c_n$ & --- \\
+    \hline 
+    cell7 & cell8 & cell9 \\
+    \hline
+    \end{tabular}
+    \text{Table 1: Varibles used and explainations}
+\end{center}
 
 \end{document}
 

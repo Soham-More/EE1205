@@ -11,7 +11,7 @@ seq = (np.arange(N) - N//2).astype(np.float32)
 
 # construct a GP sequence
 def getGPsequence(a, r):
-    GP = a * np.power(r, seq - 1) * np.heaviside(seq, 0)
+    GP = a * np.power(r, seq) * np.heaviside(seq, 1)
     return GP
 
 # a_n GP
