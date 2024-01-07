@@ -15,13 +15,32 @@ def getGPsequence(a, r):
     return GP
 
 # a_n GP
-plt.stem(seq, getGPsequence(2, 2.0 ** 0.5), 'ro', label='$x_a$(n)')
-plt.stem(seq, getGPsequence(3.0 ** 0.5, 3.0 ** 0.5), 'go', label='$x_b$(n)')
-plt.stem(seq, getGPsequence(1/3, 1/3), 'bo', label='$x_c$(n)')
+plt.stem(seq, getGPsequence(2, 2.0 ** 0.5), 'ro')
 plt.xlabel('n')
-plt.ylabel('values')
-plt.title('$x_a$(n), $x_b$(n), $x_c$(n) plot')
+plt.ylabel('$x_a$(n)')
+plt.title('$x_a$(n) plot')
 plt.grid()
-plt.legend(['$x_a$(n)', '$x_b$(n)', '$x_c$(n)'])
 # save plot
 plt.savefig('figs/a.png')
+
+# clear previous plot
+plt.clf()
+# b_n GP
+plt.stem(seq, getGPsequence(3.0 ** 0.5, 3.0 ** 0.5), 'go')
+plt.xlabel('n')
+plt.ylabel('$x_b$(n)')
+plt.title('$x_b$(n) plot')
+plt.grid()
+# save plot
+plt.savefig('figs/b.png')
+
+# clear previous plot
+plt.clf()
+# c_n GP
+plt.stem(seq, getGPsequence(1/3, 1/3), 'bo')
+plt.xlabel('n')
+plt.ylabel('$x_c$(n)')
+plt.title('$x_c$(n) plot')
+plt.grid()
+# save plot
+plt.savefig('figs/c.png')
