@@ -15,7 +15,7 @@ def getGPsequence(a, r):
     return GP
 
 # a_n GP
-plt.stem(seq, getGPsequence(2, 2.0 ** 0.5), 'ro')
+plt.stem(seq, getGPsequence(2, 2.0 ** 0.5), 'ro', basefmt='k')
 plt.xlabel('n')
 plt.ylabel('$x_a$(n)')
 plt.title('$x_a$(n) plot')
@@ -26,7 +26,7 @@ plt.savefig('figs/a.png')
 # clear previous plot
 plt.clf()
 # b_n GP
-plt.stem(seq, getGPsequence(3.0 ** 0.5, 3.0 ** 0.5), 'go')
+plt.stem(seq, getGPsequence(3.0 ** 0.5, 3.0 ** 0.5), 'go', basefmt='k')
 plt.xlabel('n')
 plt.ylabel('$x_b$(n)')
 plt.title('$x_b$(n) plot')
@@ -37,7 +37,7 @@ plt.savefig('figs/b.png')
 # clear previous plot
 plt.clf()
 # c_n GP
-plt.stem(seq, getGPsequence(1/3, 1/3), 'bo')
+plt.stem(seq, getGPsequence(1/3, 1/3), 'bo', basefmt='k')
 plt.xlabel('n')
 plt.ylabel('$x_c$(n)')
 plt.title('$x_c$(n) plot')
