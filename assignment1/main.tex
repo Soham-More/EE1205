@@ -44,6 +44,9 @@
 \newtheorem{rem}{Remark}
 \begin{document}
 
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
@@ -65,7 +68,11 @@ Which term of the following sequences:\\
 \quad(b) $\sqrt{3}$,3,$3\sqrt{3}$\dots is 729\\
 (c) $\frac{1}{3}$,$\frac{1}{9}$,$\frac{1}{27}$\dots is $\frac{1}{19683}$
 
-\textbf{Answer:} (a) Let $a_1 = 2$, $a_2 = 2\sqrt{2}$, $a_3 = 4$.\\
+\textbf{Answer:} (a) 
+
+\input{tables/a.tex}
+
+Let $a_1 = 2$, $a_2 = 2\sqrt{2}$, $a_3 = 4$.\\
 Since, $\frac{a_2}{a_1} = \frac{a_3}{a_2}$, the sequence $a_1, a_2, a_3$ is a G.P Series.
 Let $r = \frac{a_2}{a_2} = \sqrt{2}$, then the general term is $a_n = a_1 r^{n-1}$.\\
 Assume $n^{th}$ term is 128, which gives: 
@@ -103,7 +110,12 @@ Taking the Z - transform:
 \end{align}
 with ROC: \[ \abs{z} > \sqrt{2} \]
 
-(b) Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
+\newpage
+(b) 
+
+\input{tables/b.tex}
+
+Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
 Since $\frac{b_2}{b_1} = \frac{b_3}{b_2}$, the sequence $b_1, b_2, b_3$ is a G.P Series.
 Let $r = \frac{b_2}{b_2} = \sqrt{3}$, then the general term is $b_n = b_1 r^{n-1}$.\\
 Assume $n^{th}$ term is 729, which gives: 
@@ -132,7 +144,11 @@ with ROC: \[ \abs{z} > \sqrt{3} \]
     \label{fig:img2}
 \end{figure}
 
-(c) Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
+(c) 
+
+\input{tables/c.tex}
+
+Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
 Since $\frac{c_2}{c_1} = \frac{c_3}{c_2}$, the sequence $c_1, c_2, c_3$ is a G.P Series.
 Let $r = \frac{c_2}{c_2} = \frac{1}{3}$, then the general term is $c_n = c_1 r^{n-1}$.\\
 Assume $n^{th}$ term is $\frac{1}{19683}$, which gives: 
@@ -164,36 +180,34 @@ Using the previous result, the Z-transform of x(n):
     \label{fig:img3}
 \end{figure}
 
-\begin{center}
-    \begin{tabular}{ | m{3cm} | m{3cm} | m{3cm} | }
-    \hline
-    Variable & Ezplaination & Values \\
-    \hline
-    r & Common ratio of G.P & $\sqrt{2}$ or $\sqrt{3}$ or $\frac{1}{3}$ \\
-    \hline
-    $a_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
-    \hline
-    $b_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
-    \hline
-    $c_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
-    \hline
-    $x_a(n)$ & Function equivalent of sequence $a_n$ & --- \\
-    \hline 
-    $x_b(n)$ & Function equivalent of sequence $b_n$ & --- \\
-    \hline 
-    $x_c(n)$ & Function equivalent of sequence $c_n$ & --- \\
-    \hline 
-    $X_a(n)$ & Z-transform of $a_n$ & --- \\
-    \hline 
-    $X_b(n)$ & Z-transform of $b_n$ & --- \\
-    \hline 
-    $X_c(n)$ & Z-transform of $c_n$ & --- \\
-    \hline 
-    cell7 & cell8 & cell9 \\
-    \hline
-    \end{tabular}
-    \text{Table 1: Varibles used and explainations}
-\end{center}
+%\begin{center}
+%    \begin{tabular}{ | m{3cm} | m{3cm} | m{3cm} | }
+%    \hline
+%    Variable & Ezplaination & Values \\
+%    \hline
+%    r & Common ratio of G.P & $\sqrt{2}$ or $\sqrt{3}$ or $\frac{1}{3}$ \\
+%    \hline
+%    $a_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+%    \hline
+%    $b_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+%    \hline
+%    $c_n$ & Sequence & 2,$2\sqrt{2}$,4\dots \\ 
+%    \hline
+%    $x_a(n)$ & Function equivalent of sequence $a_n$ & --- \\
+%    \hline 
+%    $x_b(n)$ & Function equivalent of sequence $b_n$ & --- \\
+%    \hline 
+%    $x_c(n)$ & Function equivalent of sequence $c_n$ & --- \\
+%    \hline 
+%    $X_a(n)$ & Z-transform of $a_n$ & --- \\
+%    \hline 
+%    $X_b(n)$ & Z-transform of $b_n$ & --- \\
+%    \hline 
+%    $X_c(n)$ & Z-transform of $c_n$ & --- \\
+%    \hline
+%    \end{tabular}
+%    \text{Table 1: Varibles used and explainations}
+%\end{center}
 
 \end{document}
 
