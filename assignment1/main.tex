@@ -90,11 +90,11 @@ Substituting Values,
     \therefore n &= 13
 \end{align}
 Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\begin{align}  x_a(n) = a_1r^{n}u[n]  \end{align} where $u[0] = 1$.
+\begin{align} x_1(n) = x_1(0)r^{n}u[n] \end{align} where $u[0] = 1$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/a.png}
-    Fig. 1: Plot of $x_a$(n) from n = -6 to 6
+    Fig. 1: Plot of $x_1$(n) from n = -6 to 6
     \label{fig:img1}
 \end{figure}
 Taking the Z - transform:
@@ -106,7 +106,7 @@ Taking the Z - transform:
     \therefore X(z) &= \frac{a_1z}{r(z - r)} \forall {\abs{z} > \abs{r}} \label{zresult}
 \end{align}
 \begin{align}
-    \therefore X_a(z) = \frac{\sqrt{2}z}{z - \sqrt{2}}\forall {\abs{z} > \sqrt{2}}
+    \therefore X_1(z) = \frac{\sqrt{2}z}{z - \sqrt{2}}\forall {\abs{z} > \sqrt{2}}
 \end{align}
 with ROC: \[ \abs{z} > \sqrt{2} \]
 
@@ -133,7 +133,7 @@ Substituting Values,
     \therefore n &= 12
 \end{align}
 Thus the $12^{th}$ term of the G.P $b_n$ is 729.
-\begin{align}  x_b(n) = b_1r^nu[n]  \end{align}
+\begin{align}  x_2(n) = x_2(0)r^nu[n]  \end{align}
 By \ref{zresult}, the Z-transform of $x_b$(n):
 \begin{align} X_b(z) = \frac{z}{z - \sqrt{3}} \end{align}
 with ROC: \[ \abs{z} > \sqrt{3} \]
