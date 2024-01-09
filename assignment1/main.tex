@@ -68,16 +68,16 @@ Which term of the following sequences:\\
 \quad(b) $\sqrt{3}$,3,$3\sqrt{3}$\dots is 729\\
 (c) $\frac{1}{3}$,$\frac{1}{9}$,$\frac{1}{27}$\dots is $\frac{1}{19683}$
 
-\textbf{Answer:} (a) Let $a_1 = 2$, $a_2 = 2\sqrt{2}$, $a_3 = 4$.\\
-Since, $\frac{a_2}{a_1} = \frac{a_3}{a_2}$, the sequence $a_1, a_2, a_3$ is a G.P Series.
-Let $r = \frac{a_2}{a_2} = \sqrt{2}$, then the general term is $a_n = a_1 r^{n-1}$.\\
+\textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $x_1\brak{1} = 2\sqrt{2}$, $x_1\brak{2} = 4$.
+Since, $\frac{x_1\brak{1}}{x_1\brak{0}} = \frac{x_1\brak{2}}{x_1\brak{1}}$, the sequence $x_1\brak{n}$ is a G.P Series.
+Let $r_1 = \frac{x_1\brak{1}}{x_1\brak{1}} = \sqrt{2}$, then the general term is $x_1\brak{n} = x_1\brak{0} r^{n-1}$.\\
 Assume $n^{th}$ term is 128, which gives: 
 \begin{align}
-    a_n &= a_1 r^{n-1} = 128\\
-    \implies r^{n-1} &= \frac{128}{a_1}\\
-    \implies n - 1 &= \log_{r}{\frac{128}{a_1}}
+    x_1\brak{n} &= x_1\brak{0} r^{n-1} = 128\\
+    \implies r_1^{n-1} &= \frac{128}{x_1\brak{0}}\\
+    \implies n - 1 &= \log_{r_1}{\frac{128}{x_1\brak{0}}}
 \end{align}
-Using values from \ref{table:1},
+Using values from \tabref{Table:1}, 
 \begin{align}
     \implies n - 1 &= \log_{\sqrt{2}}{\frac{128}{2}}\\
     \implies n - 1 &= \log_{\sqrt{2}}{64}\\
@@ -85,39 +85,37 @@ Using values from \ref{table:1},
     \implies n - 1 &= 12\\
     \therefore n &= 13
 \end{align}
-Thus the $13^{th}$ term of the G.P $a_n$ is 128.\\ 
-\begin{align} x_1(n) = x_1(0)r^{n}u[n] \end{align} where $u[0] = 1$.
+Thus the $13^{th}$ term of the G.P $x_1\brak{n}$ is 128.\\ 
+\begin{align} x_1\brak{n} = x_1(0)r^{n}u[n] \end{align} where $u[0] = 1$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/a.png}
-    Fig. 1: Plot of $x_1$(n) from n = -6 to 6
+    Fig. 1: Plot of $x_1$\brak{n} from n = -6 to 6
     \label{fig:img1}
 \end{figure}
 Taking the Z - transform:
 \begin{align}
-    X(z) &= \sum_{n = -\infty}^{\infty}{x(n) \cdot z^{-n}}\\
-    \implies X(z) &= \sum_{n = 0}^{\infty}{a_1r^{n}z^{-n}}\\
-    \implies X(z) &= a_1\sum_{n = 0}^{\infty}{r^n z^{-n}}\\
-    \implies X(z) &= \frac{a_1}{r}(\frac{1}{1 - \frac{r}{z}})\\
-    \therefore X(z) &= \frac{a_1z}{r(z - r)} \forall {\abs{z} > \abs{r}} \label{zresult}
+    X\brak{z} &= \sum_{n = -\infty}^{\infty}{x\brak{n} \cdot z^{-n}}\\
+    \implies X\brak{z} &= \sum_{n = 0}^{\infty}{x\brak{0}r^{n}z^{-n}}\\
+    \implies X\brak{z} &= x\brak{0}\sum_{n = 0}^{\infty}{r^n z^{-n}}\\
+    \implies X\brak{z} &= \frac{x\brak{0}}{r}(\frac{1}{1 - \frac{r}{z}})\\
+    \therefore X\brak{z} &= \frac{x\brak{0}z}{r(z - r)} \forall {\abs{z} > \abs{r}} \label{zresult}
 \end{align}
 \begin{align}
-    \therefore X_1(z) = \frac{\sqrt{2}z}{z - \sqrt{2}}\forall {\abs{z} > \sqrt{2}}
+    \therefore X_1\brak{z} = \frac{\sqrt{2}z}{z - \sqrt{2}}\forall {\abs{z} > \sqrt{2}}
 \end{align}
 with ROC: \[ \abs{z} > \sqrt{2} \]
 
-\input{tables/a.tex}
-
-(b) Let $b_1 = \sqrt{3}$, $b_2 = 3$, $b_3 = 3\sqrt{3}$.\\
-Since $\frac{b_2}{b_1} = \frac{b_3}{b_2}$, the sequence $b_1, b_2, b_3$ is a G.P Series.
-Let $r = \frac{b_2}{b_2} = \sqrt{3}$, then the general term is $b_n = b_1 r^{n-1}$.\\
+(b) Let $x_2\brak{0} = \sqrt{3}$, $x_2\brak{1} = 3$, $x_2\brak{2} = 3\sqrt{3}$.\\
+Since $\frac{x_2\brak{1}}{x_2\brak{0}} = \frac{x_2\brak{2}}{x_2\brak{1}}$, the sequence $x_2\brak{n}$ is a G.P Series.
+Let $r_2 = \frac{x_2\brak{1}}{x_2\brak{1}} = \sqrt{3}$, then the general term is $x_2\brak{n} = x_2\brak{0} r^{n-1}$.\\
 Assume $n^{th}$ term is 729, which gives: 
 \begin{align}
-    b_n &= b_1 r^{n-1} = 729\\
-    \implies r^{n-1} &= \frac{729}{b_1}\\
-    \implies n - 1 &= \log_{r}{\frac{729}{b_1}}
+    x_2\brak{n} &= x_2\brak{0} r^{n-1} = 729\\
+    \implies r_2^{n-1} &= \frac{729}{x_2\brak{0}}\\
+    \implies n - 1 &= \log_{r_2}{\frac{729}{x_2\brak{0}}}
 \end{align}
-Using values from \ref{table:2},
+Using values from \tabref{Table:1},
 \begin{align}
     \implies n - 1 &= \log_{\sqrt{3}}{\frac{729}{\sqrt{3}}}\\
     \implies n - 1 &= \log_{\sqrt{3}}{\frac{3^6}{\sqrt{3}}}\\
@@ -125,30 +123,28 @@ Using values from \ref{table:2},
     \implies n - 1 &= 11\\
     \therefore n &= 12
 \end{align}
-Thus the $12^{th}$ term of the G.P $b_n$ is 729.
-\begin{align}  x_2(n) = x_2(0)r^nu[n]  \end{align}
-By \ref{zresult}, the Z-transform of $x_b$(n):
-\begin{align} X_2(z) = \frac{z}{z - \sqrt{3}} \end{align}
+Thus the $12^{th}$ term of the G.P $x_2\brak{n}$ is 729.
+\begin{align}  x_2\brak{n} = x_2(0)r_2^nu[n]  \end{align}
+By \ref{zresult}, the Z-transform of $x_b$\brak{n}:
+\begin{align} X_2\brak{z} = \frac{z}{z - \sqrt{3}} \end{align}
 with ROC: \[ \abs{z} > \sqrt{3} \]
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/b.png}
-    Fig. 2: Plot of $x_b$(n) from n = -6 to 6
+    Fig. 2: Plot of $x_b$\brak{n} from n = -6 to 6
     \label{fig:img2}
 \end{figure}
 
-\input{tables/b.tex}
-
-(c) Let $c_1 = \frac{1}{3}, c_2 = \frac{1}{9}, c_3 = \frac{1}{27}$.\\
-Since $\frac{c_2}{c_1} = \frac{c_3}{c_2}$, the sequence $c_1, c_2, c_3$ is a G.P Series.
-Let $r = \frac{c_2}{c_2} = \frac{1}{3}$, then the general term is $c_n = c_1 r^{n-1}$.\\
+(c) Let $x_3\brak{0} = \frac{1}{3}, x_3\brak{1} = \frac{1}{9}, x_3\brak{2} = \frac{1}{27}$.\\
+Since $\frac{x_3\brak{1}}{x_3\brak{0}} = \frac{x_3\brak{2}}{x_3\brak{1}}$, the sequence $x_3\brak{n}$ is a G.P Series.
+Let $r_3 = \frac{x_3\brak{1}}{x_3\brak{1}} = \frac{1}{3}$, then the general term is $x_3\brak{n} = x_3\brak{0} r^{n-1}$.\\
 Assume $n^{th}$ term is $\frac{1}{19683}$, which gives: 
 \begin{align}
-    c_n &= c_1 r^{n-1} = \frac{1}{19683}\\
-    \implies r^{n-1} &= \frac{1}{19683 c_1}\\
-    \implies n - 1 &= \log_{r}{\frac{1}{19683 c_1}}
+    x_3\brak{n} &= x_3\brak{0} r_3^{n-1} = \frac{1}{19683}\\
+    \implies r_3^{n-1} &= \frac{1}{19683 x_3\brak{0}}\\
+    \implies n - 1 &= \log_{r_3}{\frac{1}{19683 x_3\brak{0}}}
 \end{align}
-Using values from \ref{table:3},
+Using values from \tabref{Table:1},
 \begin{align}
     \implies n - 1 &= \log_{\frac{1}{3}}{\frac{1}{19683 \frac{1}{3}}}\\
     \implies n - 1 &= \log_{\frac{1}{3}}{\frac{1}{6561}}\\
@@ -156,20 +152,22 @@ Using values from \ref{table:3},
     \implies n - 1 &= 8\\
     \therefore n &= 9
 \end{align}
-Thus the $9^{th}$ term of the G.P $c_n$ is $\frac{1}{19683}$.
-\begin{align}  x_3(n) = X_3(0)r^{n}u[n]  \end{align}
-By \ref{zresult}, the Z-transform of x(n):
+Thus the $9^{th}$ term of the G.P $x_3\brak{n}$ is $\frac{1}{19683}$.
+\begin{align}  x_3\brak{n} = x_3(0)r_3^{n}u[n]  \end{align}
+By \ref{zresult}, the Z-transform of $x_3\brak{n}$:
 \begin{align}
-    X_3(z) = \frac{z}{z - \frac{1}{3}}
-    \implies X_3(z) = \frac{3z}{3z - 1}
+    X_3\brak{z} = \frac{z}{z - \frac{1}{3}}
+    \implies X_3\brak{z} = \frac{3z}{3z - 1}
 \end{align} with ROC: \[ \abs{z} > \frac{1}{3} \]
-\input{tables/c.tex}
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/c.png}
-    Fig. 3: Plot of $x_3$(n) from n = -6 to 6
+    Fig. 3: Plot of $x_3$\brak{n} from n = -6 to 6
     \label{fig:img3}
 \end{figure}
+
+\input{tables/c.tex}
 
 \end{document}
 
