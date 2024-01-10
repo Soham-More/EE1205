@@ -70,7 +70,7 @@ Which term of the following sequences:\\
 
 \textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $x_1\brak{1} = 2\sqrt{2}$, $x_1\brak{2} = 4$.
 Since, $\frac{x_1\brak{1}}{x_1\brak{0}} = \frac{x_1\brak{2}}{x_1\brak{1}}$, the sequence $x_1\brak{n}$ is a G.P Series.
-Let $r_1 = \frac{x_1\brak{1}}{x_1\brak{1}} = \sqrt{2}$, then the general term is $x_1\brak{n} = x_1\brak{0} r^{n-1}$.\\
+Let $r_1 = \frac{x_1\brak{2}}{x_1\brak{1}} = \sqrt{2}$, then the general term is $x_1\brak{n} = x_1\brak{0} r^{n-1}$.\\
 Assume $n^{th}$ term is 128, which gives: 
 \begin{align}
     x_1\brak{n} &= x_1\brak{0} r^{n-1} = 128\\
@@ -93,7 +93,9 @@ Thus the $13^{th}$ term of the G.P $x_1\brak{n}$ is 128.\\
     Fig. 1: Plot of $x_1$\brak{n} from n = -6 to 6
     \label{fig:img1}
 \end{figure}
-Taking the Z - transform:
+
+
+Let $x\brak{n} = x\brak{0}r^nu[n]$ be a general sequence then it's Z-transform:
 \begin{align}
     X\brak{z} &= \sum_{n = -\infty}^{\infty}{x\brak{n} \cdot z^{-n}}\\
     \implies X\brak{z} &= \sum_{n = 0}^{\infty}{x\brak{0}r^{n}z^{-n}}\\
@@ -125,7 +127,7 @@ Using values from \tabref{Table:1},
 \end{align}
 Thus the $12^{th}$ term of the G.P $x_2\brak{n}$ is 729.
 \begin{align}  x_2\brak{n} = x_2(0)r_2^nu[n]  \end{align}
-By \ref{zresult}, the Z-transform of $x_b$\brak{n}:
+By eqn \ref{zresult}, the Z-transform of $x_b$\brak{n}:
 \begin{align} X_2\brak{z} = \frac{z}{z - \sqrt{3}} \end{align}
 with ROC: \[ \abs{z} > \sqrt{3} \]
 \begin{figure}[h!]
@@ -154,7 +156,7 @@ Using values from \tabref{Table:1},
 \end{align}
 Thus the $9^{th}$ term of the G.P $x_3\brak{n}$ is $\frac{1}{19683}$.
 \begin{align}  x_3\brak{n} = x_3(0)r_3^{n}u[n]  \end{align}
-By \ref{zresult}, the Z-transform of $x_3\brak{n}$:
+By eqn \ref{zresult}, the Z-transform of $x_3\brak{n}$:
 \begin{align}
     X_3\brak{z} = \frac{z}{z - \frac{1}{3}}
     \implies X_3\brak{z} = \frac{3z}{3z - 1}
@@ -167,7 +169,7 @@ By \ref{zresult}, the Z-transform of $x_3\brak{n}$:
     \label{fig:img3}
 \end{figure}
 
-\input{tables/c.tex}
+\input{tables/table.tex}
 
 \end{document}
 
