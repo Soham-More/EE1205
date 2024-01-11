@@ -99,8 +99,8 @@ Let $x\brak{n} = x\brak{0}r^nu[n]$ be a general sequence then it's Z-transform:
     X\brak{z} &= \sum_{n = -\infty}^{\infty}{x\brak{n} \cdot z^{-n}}\\
     \implies X\brak{z} &= \sum_{n = 0}^{\infty}{x\brak{0}r^{n}z^{-n}}\\
     \implies X\brak{z} &= x\brak{0}\sum_{n = 0}^{\infty}{r^n z^{-n}}\\
-    \implies X\brak{z} &= \frac{x\brak{0}}{r}(\frac{1}{1 - \frac{r}{z}})\\
-    \therefore X\brak{z} &= \frac{x\brak{0}z}{r(z - r)} \forall {\abs{z} > \abs{r}} \label{zresult}
+    \implies X\brak{z} &= x\brak{0}(\frac{1}{1 - \frac{r}{z}})\\
+	\therefore X\brak{z} &= \frac{x\brak{0}}{1 - rz^{-1}} \forall {\abs{z} > \abs{r}} \label{zresult}
 \end{align}
 \begin{align}
     \therefore X_1\brak{z} = \frac{\sqrt{2}z}{z - \sqrt{2}}
