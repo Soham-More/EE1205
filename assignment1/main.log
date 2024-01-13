@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  13 JAN 2024 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  13 JAN 2024 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,28 +1295,29 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
-
- []
-
 <figs/a.png, id=8, 462.528pt x 346.896pt>
 File: figs/a.png Graphic file (type png)
 <use figs/a.png>
-Package pdftex.def Info: figs/a.png  used on input line 90.
-(pdftex.def)             Requested size: 232.19843pt x 174.15157pt.
+Package pdftex.def Info: figs/a.png  used on input line 89.
+(pdftex.def)             Requested size: 258.0pt x 193.50879pt.
 
-Underfull \vbox (badness 2409) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
-
+Overfull \hbox (6.0pt too wide) in paragraph at lines 89--90
+ [][] 
  []
+
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
 <figs/b.png, id=14, 462.528pt x 346.896pt>
 File: figs/b.png Graphic file (type png)
 <use figs/b.png>
-Package pdftex.def Info: figs/b.png  used on input line 132.
-(pdftex.def)             Requested size: 232.19843pt x 174.15157pt.
+Package pdftex.def Info: figs/b.png  used on input line 128.
+(pdftex.def)             Requested size: 258.0pt x 193.50879pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 128--129
+ [][] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1324,19 +1325,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
  <./figs/a.png>]
-<figs/c.png, id=53, 462.528pt x 346.896pt>
+<figs/c.png, id=54, 462.528pt x 346.896pt>
 File: figs/c.png Graphic file (type png)
 <use figs/c.png>
-Package pdftex.def Info: figs/c.png  used on input line 160.
-(pdftex.def)             Requested size: 232.19843pt x 174.15157pt.
+Package pdftex.def Info: figs/c.png  used on input line 155.
+(pdftex.def)             Requested size: 258.0pt x 193.50879pt.
 
-(./tables/table.tex) [2 <./figs/b.png> <./figs/c.png>] (./main.aux)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 155--156
+ [][] 
+ []
+
+(./tables/table.tex) [2
+
+ <./figs/b.png> <./figs/c.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30917 strings out of 478287
- 609623 string characters out of 5849290
+ 30916 strings out of 478287
+ 609610 string characters out of 5849290
  887696 words of memory out of 5000000
  48424 multiletter control sequences out of 15000+600000
  540662 words of font info for 173 fonts, out of 8000000 for 9000
@@ -1350,10 +1357,10 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 84517 bytes).
+Output written on main.pdf (2 pages, 83668 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 30 named destinations out of 1000 (max. 500000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
