@@ -68,7 +68,7 @@ Which term of the following sequences:\\
 \quad(b) $\sqrt{3}$,3,$3\sqrt{3}$\dots is 729\\
 (c) $\frac{1}{3}$,$\frac{1}{9}$,$\frac{1}{27}$\dots is $\frac{1}{19683}$
 
-\textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $r_1 = \sqrt{2}$, then the general term is:
+\textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $r_1 = \sqrt{2}$, then:
 \begin{align}
     x_1\brak{n} = x_1\brak{0} r_1^nu[n]
 \end{align}
@@ -87,7 +87,7 @@ Thus the $13^{th}$ term of the G.P $x_1\brak{n}$ is 128.\\
 \begin{figure}[h!]
     \renewcommand\thefigure{1}
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/a.png}
+    \includegraphics[width=0.45\textwidth]{figs/a.png}
     \caption[short]{Plot of $x_1$\brak{n} vs n. See \tabref{Table:1}}
     \label{fig:img1}
 \end{figure}
@@ -97,7 +97,6 @@ Let $x\brak{n} = x\brak{0}r^nu[n]$ then:
 \begin{align}
     X\brak{z} &= \sum_{n = -\infty}^{\infty}{x\brak{n} \cdot z^{-n}}\\
     \implies X\brak{z} &= \sum_{n = 0}^{\infty}{x\brak{0}r^{n}z^{-n}}\\
-    \implies X\brak{z} &= x\brak{0}\sum_{n = 0}^{\infty}{r^n z^{-n}}\\
     \implies X\brak{z} &= x\brak{0}(\frac{1}{1 - \frac{r}{z}})\\
 	\therefore X\brak{z} &= \frac{x\brak{0}}{1 - rz^{-1}} \quad \forall \quad {\abs{z} > \abs{r}} \label{zresult}
 \end{align}
@@ -105,7 +104,7 @@ Let $x\brak{n} = x\brak{0}r^nu[n]$ then:
     \therefore X_1\brak{z} = \frac{2}{1 - \sqrt{2}z^{-1}} \quad \forall \quad \abs{z} > \sqrt{2}
 \end{align}
 
-(b) Let $x_2\brak{0} = \sqrt{3}$, $r_2 = \sqrt{3}$, then the general term is:
+(b) Let $x_2\brak{0} = \sqrt{3}$, $r_2 = \sqrt{3}$, then:
 \begin{align}
     x_2\brak{n} = x_2\brak{0} r_2^nu[n]
 \end{align}
@@ -130,12 +129,12 @@ By eqn \ref{zresult}, the Z-transform of $x_2$\brak{n}:
 \begin{figure}[h!]
     \renewcommand\thefigure{2}
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/b.png}
+    \includegraphics[width=0.45\textwidth]{figs/b.png}
     \caption[short]{Plot of $x_2$\brak{n} vs n. See \tabref{Table:1}}
     \label{fig:img2}
 \end{figure}
 
-(c) Let $x_3\brak{0} = \frac{1}{3}$, $r_3 = \frac{1}{3}$, then the general term is:
+(c) Let $x_3\brak{0} = \frac{1}{3}$, $r_3 = \frac{1}{3}$, then:
 \begin{align}
     x_3\brak{n} = x_3\brak{0} r_3^nu[n]
 \end{align}
@@ -158,7 +157,7 @@ By eqn \ref{zresult}, the Z-transform of $x_3\brak{n}$:
 \begin{figure}[h!]
     \renewcommand\thefigure{3}
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/c.png}
+    \includegraphics[width=0.45\textwidth]{figs/c.png}
     \caption[short]{Plot of $x_3$\brak{n} vs n. See \tabref{Table:1}}
     \label{fig:img3}
 \end{figure}
