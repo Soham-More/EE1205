@@ -68,19 +68,28 @@ Which term of the following sequences:\\
 \quad(b) $\sqrt{3}$,3,$3\sqrt{3}$\dots is 729\\
 (c) $\frac{1}{3}$,$\frac{1}{9}$,$\frac{1}{27}$\dots is $\frac{1}{19683}$
 
+\textbf{Derivations:} For a general GP series:
+\begin{align}
+    x\brak{k} = x\brak{0}r^ku\brak{k}
+\end{align}
+Assuming $x\brak{k} = v\,\brak{k > 0}$,
+\begin{align}
+    x\brak{k} &= x\brak{0}r^k = v \\
+    \therefore k &= \log_r{\frac{v}{x\brak{0}}} \label{gsoln}
+\end{align}
+And the Z-transform $X\brak{z}$:
+\begin{align}
+    X\brak{z} &= \frac{x\brak{0}}{1 - rz^{-1}} \quad \forall \quad {\abs{z} > \abs{r}} \label{zresult}
+\end{align}
+
 \textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $r_1 = \sqrt{2}$, then:
 \begin{align}
-    x_1\brak{n} = x_1\brak{0} r_1^nu[n]
+    x_1\brak{n} = x_1\brak{0} r_1^nu\brak{n}
 \end{align}
-where u[0] = 1. Assuming $x\brak{n} = 128$: 
+By eqn \ref{gsoln}, \tabref{Table:1} and $v = 128$: 
 \begin{align}
-    x_1\brak{n} &= x_1\brak{0} r^n = 128\\
-    \implies n &= \log_{r_1}{\frac{128}{x_1\brak{0}}}
-\end{align}
-Using values from \tabref{Table:1}, 
-\begin{align}
-    \implies n &= \log_{\sqrt{2}}{\frac{128}{2}}\\
-    \therefore n &= 12
+    k &= \log_{r_1}{\frac{128}{x_1\brak{0}}} \\
+    \therefore k &= 12
 \end{align}
 
 \begin{figure}[h!]
@@ -91,31 +100,19 @@ Using values from \tabref{Table:1},
     \label{fig:img1}
 \end{figure}
 
-
-Let $x\brak{n} = x\brak{0}r^nu[n]$ then:
+By eqn \ref{zresult}:
 \begin{align}
-    X\brak{z} &= \sum_{n = -\infty}^{\infty}{x\brak{n} \cdot z^{-n}}\\
-    \implies X\brak{z} &= \sum_{n = 0}^{\infty}{x\brak{0}r^{n}z^{-n}}\\
-    \implies X\brak{z} &= x\brak{0}(\frac{1}{1 - \frac{r}{z}})\\
-	\therefore X\brak{z} &= \frac{x\brak{0}}{1 - rz^{-1}} \quad \forall \quad {\abs{z} > \abs{r}} \label{zresult}
-\end{align}
-\begin{align}
-    \therefore X_1\brak{z} = \frac{2}{1 - \sqrt{2}z^{-1}} \quad \forall \quad \abs{z} > \sqrt{2}
+	\therefore X_1\brak{z} = \frac{2}{1 - \sqrt{2}z^{-1}} \quad \forall \quad \abs{z} > \sqrt{2}
 \end{align}
 
 (b) Let $x_2\brak{0} = \sqrt{3}$, $r_2 = \sqrt{3}$, then:
 \begin{align}
-    x_2\brak{n} = x_2\brak{0} r_2^nu[n]
+    x_2\brak{n} = x_2\brak{0} r_2^nu\brak{n}
 \end{align}
-Assuming $x\brak{n} = 729$:
+By eqn \ref{gsoln}, \tabref{Table:1} and $v = 729$:
 \begin{align}
-    x_2\brak{n} &= x_2\brak{0} r_2^n = 729\\
-    \implies n &= \log_{r_2}{\frac{729}{x_2\brak{0}}}
-\end{align}
-Using values from \tabref{Table:1},
-\begin{align}
-    \implies n &= \log_{\sqrt{3}}{\frac{729}{\sqrt{3}}}\\
-    \therefore n &= 11
+    k &= \log_{r_2}{\frac{729}{x_2\brak{0}}} \\
+    \therefore k &= 11
 \end{align}
 By eqn \ref{zresult}, the Z-transform of $x_2$\brak{n}:
 \begin{align}
@@ -132,17 +129,12 @@ By eqn \ref{zresult}, the Z-transform of $x_2$\brak{n}:
 
 (c) Let $x_3\brak{0} = \frac{1}{3}$, $r_3 = \frac{1}{3}$, then:
 \begin{align}
-    x_3\brak{n} = x_3\brak{0} r_3^nu[n]
+    x_3\brak{n} = x_3\brak{0} r_3^nu\brak{n}
 \end{align}
-Assuming $x\brak{n} = \frac{1}{19683}$: 
+By eqn \ref{gsoln}, \tabref{Table:1} and $v = \frac{1}{19683}$:
 \begin{align}
-    x_3\brak{n} &= x_3\brak{0} r_3^n = \frac{1}{19683}\\
-    \implies n &= \log_{r_3}{\frac{1}{19683 x_3\brak{0}}}
-\end{align}
-Using values from \tabref{Table:1},
-\begin{align}
-    \implies n &= \log_{\frac{1}{3}}{\frac{1}{19683 \frac{1}{3}}}\\
-    \therefore n &= 8
+    k &= \log_{r_3}{\frac{1}{19683 x_3\brak{0}}} \\
+    \therefore k &= 8
 \end{align}
 By eqn \ref{zresult}, the Z-transform of $x_3\brak{n}$:
 \begin{align}

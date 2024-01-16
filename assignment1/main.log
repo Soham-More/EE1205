@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  13 JAN 2024 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  16 JAN 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,72 +1295,67 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<figs/a.png, id=8, 462.528pt x 346.896pt>
+<figs/a.png, id=9, 462.528pt x 346.896pt>
 File: figs/a.png Graphic file (type png)
 <use figs/a.png>
-Package pdftex.def Info: figs/a.png  used on input line 89.
+Package pdftex.def Info: figs/a.png  used on input line 98.
 (pdftex.def)             Requested size: 258.0pt x 193.50879pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 89--90
+Overfull \hbox (6.0pt too wide) in paragraph at lines 98--99
  [][] 
  []
 
-
-Underfull \vbox (badness 2698) has occurred while \output is active []
-
-<figs/b.png, id=14, 462.528pt x 346.896pt>
+<figs/b.png, id=17, 462.528pt x 346.896pt>
 File: figs/b.png Graphic file (type png)
 <use figs/b.png>
-Package pdftex.def Info: figs/b.png  used on input line 128.
+Package pdftex.def Info: figs/b.png  used on input line 125.
 (pdftex.def)             Requested size: 258.0pt x 193.50879pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 128--129
+Overfull \hbox (6.0pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+<figs/c.png, id=23, 462.528pt x 346.896pt>
+File: figs/c.png Graphic file (type png)
+<use figs/c.png>
+Package pdftex.def Info: figs/c.png  used on input line 147.
+(pdftex.def)             Requested size: 258.0pt x 193.50879pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 147--148
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./tables/table.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/a.png>]
-<figs/c.png, id=54, 462.528pt x 346.896pt>
-File: figs/c.png Graphic file (type png)
-<use figs/c.png>
-Package pdftex.def Info: figs/c.png  used on input line 155.
-(pdftex.def)             Requested size: 258.0pt x 193.50879pt.
+ <./figs/a.png> <./figs/b.png>] [2
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 155--156
- [][] 
- []
-
-(./tables/table.tex) [2
-
- <./figs/b.png> <./figs/c.png>] (./main.aux)
+ <./figs/c.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30916 strings out of 478287
- 609610 string characters out of 5849290
- 887696 words of memory out of 5000000
- 48424 multiletter control sequences out of 15000+600000
+ 30911 strings out of 478287
+ 609539 string characters out of 5849290
+ 884722 words of memory out of 5000000
+ 48425 multiletter control sequences out of 15000+600000
  540662 words of font info for 173 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,13n,96p,408b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,13n,96p,408b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 83668 bytes).
+1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 85439 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 29 named destinations out of 1000 (max. 500000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
