@@ -68,7 +68,7 @@ Which term of the following sequences:\\
 \quad(b) $\sqrt{3}$,3,$3\sqrt{3}$\dots is 729\\
 (c) $\frac{1}{3}$,$\frac{1}{9}$,$\frac{1}{27}$\dots is $\frac{1}{19683}$
 
-\textbf{Derivations:} For a general GP series:
+\textbf{Answer:} For a general GP series:
 \begin{align}
     x\brak{k} = x\brak{0}r^ku\brak{k}
 \end{align}
@@ -82,14 +82,14 @@ And the Z-transform $X\brak{z}$:
     X\brak{z} &= \frac{x\brak{0}}{1 - rz^{-1}} \quad \forall \quad {\abs{z} > \abs{r}} \label{zresult}
 \end{align}
 
-\textbf{Answer:} (a) Let $x_1\brak{0} = 2$, $r_1 = \sqrt{2}$, then:
+(a) Let $x_1\brak{0} = 2$, $r_1 = \sqrt{2}$, then:
 \begin{align}
     x_1\brak{n} = x_1\brak{0} r_1^nu\brak{n}
 \end{align}
 By eqn \ref{gsoln}, \tabref{Table:1} and $v = 128$: 
 \begin{align}
-    k &= \log_{r_1}{\frac{128}{x_1\brak{0}}} \\
-    \therefore k &= 12
+    k_1 &= \log_{r_1}{\frac{128}{x_1\brak{0}}} \\
+    \therefore k_1 &= 12
 \end{align}
 
 \begin{figure}[h!]
@@ -111,8 +111,8 @@ By eqn \ref{zresult}:
 \end{align}
 By eqn \ref{gsoln}, \tabref{Table:1} and $v = 729$:
 \begin{align}
-    k &= \log_{r_2}{\frac{729}{x_2\brak{0}}} \\
-    \therefore k &= 11
+    k_2 &= \log_{r_2}{\frac{729}{x_2\brak{0}}} \\
+    \therefore k_2 &= 11
 \end{align}
 By eqn \ref{zresult}, the Z-transform of $x_2$\brak{n}:
 \begin{align}
@@ -133,8 +133,8 @@ By eqn \ref{zresult}, the Z-transform of $x_2$\brak{n}:
 \end{align}
 By eqn \ref{gsoln}, \tabref{Table:1} and $v = \frac{1}{19683}$:
 \begin{align}
-    k &= \log_{r_3}{\frac{1}{19683 x_3\brak{0}}} \\
-    \therefore k &= 8
+    k_3 &= \log_{r_3}{\frac{1}{19683 x_3\brak{0}}} \\
+    \therefore k_3 &= 8
 \end{align}
 By eqn \ref{zresult}, the Z-transform of $x_3\brak{n}$:
 \begin{align}
