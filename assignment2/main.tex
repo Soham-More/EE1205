@@ -65,23 +65,42 @@
 \textbf{Question:} The Laplace transform of the continuous-time signal $x\brak{t} = e^{-3t}u\brak{t - 5}$ is 
 \rule{1cm}{0.15mm}, where $u\brak{t}$ denotes the continuous-time unit step signal.
 
-\solution Laplace Transfrom is given by:
+\textbf{Derivations:} Laplace transform of $e^{-at}u\brak{t}$ is:
 
 \begin{align}
     X\brak{s} &= \int_{0}^{\infty}{x\brak{t}e^{-st}dt} \\
-    X\brak{s} &= \int_{0}^{\infty}{u\brak{t - 5}e^{-3t}e^{-st}dt} \\
-    X\brak{s} &= \int_{5}^{\infty}{e^{-\brak{s + 3}t}dt} \\
-    X\brak{s} &= \frac{-1}{s + 3}\brak{\lim_{t \to \infty}{e^{-\brak{s + 3}t}} - e^{-5\brak{s + 3}}} \\
-    \therefore X\brak{s} &= \frac{e^{-5\brak{s + 3}}}{s + 3} \quad \Re\brak{s} > -3
+    X\brak{s} &= \int_{0}^{\infty}{u\brak{t}e^{-at}e^{-st}dt} \\
+    X\brak{s} &= \int_{0}^{\infty}{e^{-\brak{s + a}t}dt} \\
+    X\brak{s} &= \frac{-1}{s + a}\brak{\lim_{t \to \infty}{e^{-\brak{s + a}t}} - 1} \\
+    \therefore X\brak{s} &= \frac{1}{s + a} \quad \Re\brak{s} > -a \label{eq:exp_laplace}
 \end{align}
 
-\begin{figure}[h!]
-    \renewcommand\thefigure{1}
-    \centering
-    \includegraphics[width=\columnwidth]{figs/X_s.png}
-    \caption[short]{Plot of $X\brak{s}$ vs $s$. See \tabref{Table:1}}
-    \label{fig:img1}
-\end{figure}
+Laplace transform of $g\brak{t - t_0}$ is given by:
+
+\begin{align}
+    H\brak{s} &= \int_{0}^{\infty}{g\brak{t - t_0}e^{-st}dt} \\
+    H\brak{s} &= \int_{-t_0}^{\infty}{g\brak{t}e^{-s\brak{t + t_0}}dt} \\
+    H\brak{s} &= e^{-st_0}\int_{0}^{\infty}{g\brak{t}e^{-s\brak{t}}dt} \\
+    H\brak{s} &= e^{-st_0}G\brak{s} \label{eq:shift_laplace}
+\end{align}
+
+where $G\brak{s}$ is laplace transform of function $g\brak{t}$ such that:
+\begin{align}
+    g\brak{t} = 0 \,\forall\, t < 0
+\end{align}
+
+\solution
+
+\begin{align}
+    x\brak{t} = e^{-15}e^{-3\brak{t - 5}}u\brak{t - 5}
+\end{align}
+if $g\brak{t} = e^{-3\brak{t}}u\brak{t}$ then by \eqref{eq:exp_laplace} and \eqref{eq:shift_laplace},
+
+\begin{align}
+    x\brak{t} &= e^{-15}g\brak{t - 5} \\
+    X\brak{s} &= e^{-15}e^{-5s}G\brak{s}\\
+    \therefore X\brak{s} &= \frac{e^{-5\brak{s + 3}}}{s + 3} \quad \Re\brak{s} > -3
+\end{align}
 
 \begin{table}[ht]
 \input{tables/table.tex}
