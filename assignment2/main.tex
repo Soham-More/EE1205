@@ -75,17 +75,20 @@
     \therefore X\brak{s} &= \frac{1}{s + a} \quad \Re\brak{s} > -a \label{eq:exp_laplace}
 \end{align}
 
-Laplace transform of $h\brak{t} = g\brak{t - t_0}$ is given by:
-
+Let,
+\begin{align}
+	g\brak{t} \system{Z} G\brak{s} \\
+    h\brak{t} = g\brak{t - t_0} \\
+    h\brak{t} \system{Z} H\brak{s}
+\end{align}
+then,
 \begin{align}
     H\brak{s} &= \int_{0}^{\infty}{g\brak{t - t_0}e^{-st}dt} \\
     H\brak{s} &= \int_{-t_0}^{\infty}{g\brak{t}e^{-s\brak{t + t_0}}dt} \\
     H\brak{s} &= e^{-st_0}\int_{0}^{\infty}{g\brak{t}e^{-s\brak{t}}dt} \\
     H\brak{s} &= e^{-st_0}G\brak{s} \label{eq:shift_laplace}
 \end{align}
-\begin{align}
-	g\brak{t} \system{Z} G\brak{s}
-\end{align}
+
 \begin{align}
     x\brak{t} = e^{-15}e^{-3\brak{t - 5}}u\brak{t - 5}
 \end{align}
