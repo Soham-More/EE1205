@@ -5,7 +5,7 @@ values = np.loadtxt('codes/values.txt', delimiter=' ')
 
 # a_n GP
 plt.plot(values[0], values[1], 'r')
-plt.xlabel('t')
+plt.xlabel('$t$')
 plt.ylabel('$x(t)$')
 plt.grid()
 # save plot

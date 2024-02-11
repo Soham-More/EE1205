@@ -67,34 +67,28 @@
 
 \solution
 
+\begin{table}[ht]
+    \input{tables/table.tex}
+\end{table}    
+
 \begin{align}
-    e^{-3t}u\brak{t} \system{L} \frac{1}{s + 3} \label{eq:2023.in.37.exp}
+    e^{-3t}u\brak{t} \system{L} \frac{1}{s + 3} \quad \Re\brak{s} > -3 \label{eq:2023.in.37.exp}
 \end{align}
 Using time shifting,
 \begin{align}
-    e^{-3(t - 5)}u\brak{t - 5} \system{L} \frac{e^{-5s}}{s + 3}
-\end{align}
-\begin{align}
-    e^{-15}e^{-3(t - 5)}u\brak{t - 5} \system{L} e^{-15}\frac{e^{-5s}}{s + 3}
-\end{align}
-\begin{align}
-    e^{-3t}u\brak{t - 5} \system{L} \frac{e^{-5(s + 3)}}{s + 3}
-\end{align}
-\begin{align}
-    \therefore x\brak{t} \system{L} \frac{e^{-5(s + 3)}}{s + 3}
+    e^{-3(t - 5)}u\brak{t - 5} &\system{L} \frac{e^{-5s}}{s + 3} \\
+    e^{-15}e^{-3(t - 5)}u\brak{t - 5} &\system{L} e^{-15}\frac{e^{-5s}}{s + 3} \\
+    e^{-3t}u\brak{t - 5} &\system{L} \frac{e^{-5(s + 3)}}{s + 3} \\
+    \therefore x\brak{t} &\system{L} \frac{e^{-5(s + 3)}}{s + 3} \quad \Re\brak{s} > -3
 \end{align}
 
 \begin{figure}[h!]
     \renewcommand\thefigure{3}
     \centering
     \includegraphics[width=\columnwidth]{figs/x_t.png}
-    \caption[short]{Plot of $x$\brak{t} vs t. See \tabref{Table:1}}
+    \caption[short]{Plot of $x$\brak{t} vs $t$. See \tabref{Table:1}}
     \label{fig:2023.in.37.img1}
 \end{figure}
-
-\begin{table}[ht]
-\input{tables/table.tex}
-\end{table}
 
 \end{document}
 
