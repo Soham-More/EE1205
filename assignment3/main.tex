@@ -50,7 +50,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{GATE 2023 IN 37Q} 
+\title{NCERT Physics 12.10.9 Q} 
 \author{ee23btech11223 - Soham Prabhakar More% <-this % stops a space
 }
 \maketitle
@@ -62,33 +62,37 @@
 
 \bibliographystyle{IEEEtran}
 
-\textbf{Question:} The Laplace transform of the continuous-time signal $x\brak{t} = e^{-3t}u\brak{t - 5}$ is 
-\rule{1cm}{0.15mm}, where $u\brak{t}$ denotes the continuous-time unit step signal.
+\textbf{Question:} Light of wavelength $5000\AA{}$ falls on a plane reflecting surface. What
+are the wavelength and frequency of the reflected light? For what
+angle of incidence is the reflected ray normal to the incident ray?\\
 
-\solution
+\hfill{(NCERT Physics 12.10.9 Q)}
 
-\begin{table}[ht]
-    \input{tables/table.tex}
-\end{table}    
-
-\begin{align}
-    e^{-3t}u\brak{t} \system{L} \frac{1}{s + 3} \quad \Re\brak{s} > -3 \label{eq:2023.in.37.exp}
-\end{align}
-Using time shifting,
-\begin{align}
-    e^{-3(t - 5)}u\brak{t - 5} &\system{L} \frac{e^{-5s}}{s + 3} \\
-    e^{-15}e^{-3(t - 5)}u\brak{t - 5} &\system{L} e^{-15}\frac{e^{-5s}}{s + 3} \\
-    e^{-3t}u\brak{t - 5} &\system{L} \frac{e^{-5(s + 3)}}{s + 3} \\
-    \therefore x\brak{t} &\system{L} \frac{e^{-5(s + 3)}}{s + 3} \quad \Re\brak{s} > -3
-\end{align}
+\solution 
 
 \begin{figure}[h!]
-    \renewcommand\thefigure{3}
-    \centering
-    \includegraphics[width=\columnwidth]{figs/x_t.png}
-    \caption[short]{Plot of $x\brak{t}$ vs $t$. See \tabref{Table:1}}
-    \label{fig:2023.in.37.img1}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[  red, thick] (0, 0) -- (2,-2);
+        \draw[ blue, thick] (2,-2) -- (4, 0);
+        \draw[black, very thick] (0,-2) -- (4,-2);
+
+        \draw[black, thick, dashed] (2,-2) -- (2, 1);
+
+        \draw[<->] (2,-1) arc (90:135:1);
+    \end{tikzpicture}
+    \end{center}
 \end{figure}
 
-\end{document}
+Since reflection does not change the wavelength/frequency of light, the wavelength($\lambda$)
+and frequency($f$) remains same:
 
+\begin{align}
+    \lambda &= 5000\AA\\
+    f &= \frac{c}{\lambda}\\
+    &= 6 \cdot 10^{15} {Hz}
+\end{align}
+
+The reflected ray is normal to incident ray for angle of incidence $ = 45\deg$.
+
+\end{document}
