@@ -1,0 +1,107 @@
+% \iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage[center]{caption} % center the captions to figure
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{NCERT Physics 12.10.9 Q} 
+\author{ee23btech11223 - Soham Prabhakar More% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\bibliographystyle{IEEEtran}
+
+\textbf{Question:} $x\brak{t}$ is a real continuous-time signal whose magnitude frequency response
+$\abs{X\brak{j\Omega}}$ is shown below. After sampling $x\brak{t}$ at 100 $rad.s^{-1}$, the spectral point P
+is down-converted to \rule{1cm}{0.15mm} $rad.s^{-1}$ in the spectrum of the sampled signal.
+
+\begin{figure}[h!]
+    \renewcommand\thefigure{1}
+    \centering
+    \includegraphics[width=\columnwidth]{figs/question.png}
+    \label{fig:2023.bm.14.img1}
+\end{figure}
+
+\solution The sampling function is:
+\begin{align}
+    w(t) &= \sum_{k = -\infty}^{\infty}\delta\brak{t - \frac{k}{100}} \\
+    W(j\omega) &= 100\sum_{k = -\infty}^{\infty}\delta\brak{j\brak{\omega - 100k}}
+\end{align}
+then the sampled function: 
+\begin{align}
+    x_s\brak{t} &= x\brak{t}w\brak{t} \\
+    X_s\brak{j\omega} &= X\brak{j\omega} * W\brak{j\omega} \\
+    X_s\brak{j\omega} &= \int_{-\infty}^{\infty}X\brak{j\theta}W\brak{j\brak{\omega - \theta}}d\theta \\
+    X_s\brak{j\omega} &= 100\sum_{k = -\infty}^{\infty}\int_{-\infty}^{\infty}X\brak{j\theta}\delta\brak{j\brak{\omega - 100k - \theta}}d\theta \\
+    X_s\brak{j\omega} &= 100\sum_{k = -\infty}^{\infty}X\brak{j\brak{\omega - 100k}} 
+\end{align}
+Thus, The down sampled point is at:
+\begin{align}
+    \omega &= \abs{162.5 - 100k}
+\end{align}
+where $k$ is the nearest integer to $\frac{162.5}{100}$, which is 2\\
+Thus,
+\begin{align}
+    \omega = 37.5\,rad\,s^{-1}
+\end{align}
+
+\begin{figure}[h!]
+    \renewcommand\thefigure{2}
+    \centering
+    \includegraphics[width=\columnwidth]{figs/X_s.png}
+    \caption[short]{Plot of $\abs{X_s\brak{j\omega}}$}
+    \label{fig:2023.bm.14.img2}
+\end{figure}
+
+\end{document}
