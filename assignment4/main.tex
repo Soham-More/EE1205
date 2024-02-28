@@ -70,12 +70,17 @@ is down-converted to \rule{1cm}{0.15mm} $rad.s^{-1}$ in the spectrum of the samp
     \renewcommand\thefigure{1}
     \centering
     \includegraphics[width=\columnwidth]{figs/question.png}
+    \caption[short]{Plot of $\abs{X\brak{j\omega}}$}
     \label{fig:2023.bm.14.img1}
 \end{figure}
 
-\solution The sampling function is:
+\solution
+\begin{table}[ht]
+    \input{tables/table.tex}
+\end{table} \\
+The sampling function is:
 \begin{align}
-    w(t) &= \sum_{k = -\infty}^{\infty}\delta\brak{t - \frac{k}{100}} \\
+    w(t) &= \sum_{k = -\infty}^{\infty}\delta\brak{t - \frac{2\pi k}{100}} \\
     W(j\omega) &= 100\sum_{k = -\infty}^{\infty}\delta\brak{j\brak{\omega - 100k}}
 \end{align}
 then the sampled function: 
