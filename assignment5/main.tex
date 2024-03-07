@@ -62,36 +62,28 @@
 
 \bibliographystyle{IEEEtran}
 
-\textbf{Question:} In the figure above figure, O is the center of the circle and, M and N lie on 
-the circle.
+\textbf{Question:} The Dirac-delta function $\brak{\delta\brak{t - t_0}}$ for $t, t_0 \in \Re$, has the following property
+\begin{align}
+    \int_{a}^{b}\phi\brak{t}\delta\brak{t - t_0}dt = 
+    \begin{cases}
+        \phi\brak{t_0}\quad a < t_0 < b\\
+        0 \quad\quad otherwise
+    \end{cases} \label{eq:2022.ME.3.1}
+\end{align}
 
-The area of the right triangle MON is $50{cm}^2$
+The Laplace Transform of the Dirac-delta function $\delta\brak{t - a}$ for $a > 0; \mathcal{L}\brak{\delta\brak{t - a}} = F\brak{s}$ is
 
-What is the area of the circle in ${cm}^2$? \\
 \hfill{(GATE 2021 ME 3Q)}
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}
-    \draw (0,0) circle (2cm);
-    \draw (0,0) node[anchor=north]{$O$}
-        -- (0,2) node[anchor=south]{$M$}
-        -- (2,0) node[anchor=west]{$N$}
-        -- cycle;
-\end{tikzpicture}
-\end{figure}
 
 \solution
 \begin{table}[ht]
     \input{tables/table.tex}
 \end{table} \\
-By \tabref{Table:1},
+
+By \eqref{eq:2022.ME.3.1} and $a > 0$,
 \begin{align}
-    A &= \frac{1}{2}\pi \, ON \cdot OM = 50{cm}^2\\
-    \because r &= ON = OM\\
-    \frac{1}{2} r^2 &= 50{cm}^2\\
-    \implies r &= 10cm\\
-    \implies A_c &= \pi r^2 = 100\pi
+    F\brak{s} &= \int_{0}^{\infty}\delta\brak{t - a}e^{-st}dt \\
+    \therefore F\brak{s} &= e^{-as}
 \end{align}
 
 \end{document}
