@@ -86,4 +86,41 @@ By \eqref{eq:2022.ME.3.1} and $a > 0$,
     \therefore F\brak{s} &= e^{-as}
 \end{align}
 
+The fourier transform,
+\begin{align}
+    G\brak{f} &= \int_{-\infty}^{\infty}\delta\brak{t - a}e^{-2\pi jft}dt \\
+    \therefore G\brak{f} &= e^{-j2\pi fa}
+\end{align}
+For a periodic signal the fourier transform is defined as:
+\begin{align}
+    H\brak{f} &= \sum_{k = -\infty}^{\infty}c_k\delta\brak{f - \frac{k}{T}}
+\end{align}
+where $c_k$ are the fourier series coefficients and $T$ is the period. Thus,
+\begin{align}
+    W_T\brak{f} &= \sum_{k = -\infty}^{\infty}c_k\delta\brak{f - \frac{k}{T}} \\
+    c_k &= \frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}w_T\brak{t}e^{-j2\pi \frac{k}{T}f}dt \\
+    c_k &= \frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}\brak{\sum_{k = -\infty}^{\infty}\delta\brak{t - kT}}e^{-j2\pi \frac{k}{T}f}dt \\
+\end{align}
+\begin{align}
+    c_k &= \frac{1}{T}\sum_{k = -\infty}^{\infty}\int_{-\frac{T}{2}}^{\frac{T}{2}}\delta\brak{t - kT}e^{-j2\pi \frac{k}{T}f}dt \\
+    c_k &= \frac{1}{T} \\
+    W_T\brak{f} &= \frac{1}{T}\sum_{k = -\infty}^{\infty}\delta\brak{f - \frac{k}{T}} \\
+    \therefore W_T\brak{f} &= \frac{1}{T}w_{\frac{1}{T}}\brak{f}
+\end{align}
+Thus, the fourier transform of impulse train is another impulse train.
+%\begin{align}
+%    f\brak{t} &\system{F} H\brak{f} \\
+%    f\brak{t + T} &\system{F} e^{j2\pi fT}H\brak{f} \\
+%    \because e^{j2\pi fT}H\brak{f} &= H\brak{f} \\
+%    H\brak{f}\brak{1 - e^{j2\pi fT}} &= 0
+%\end{align}
+%Thus, $H\brak{f}$ is zero everywhere except at $f = \frac{n}{T}, n \in Z$
+%\begin{align}
+%    \therefore H\brak{f} &= \sum_{k = -\infty}^{\infty}c_k\delta\brak{f - \frac{k}{T}} \\
+%    \because \sum_{k = -\infty}^{\infty}c_ke^{-j2\pi f\frac{k}{T}} &\system{F} H\brak{f}
+%\end{align}
+%$c_k$ are the fourier series coefficents of $h\brak{t}$,
+%\begin{align}
+%    c_k = \int_{-\frac{T}{2}}^{\frac{T}{2}}
+%\end{align}
 \end{document}
