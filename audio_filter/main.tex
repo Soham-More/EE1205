@@ -1,0 +1,588 @@
+% \iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage[center]{caption} % center the captions to figure
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Audio Filter} 
+\author{ee23btech11223 - Soham Prabhakar More% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\bibliographystyle{IEEEtran}
+
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\section{Digital Filter}
+
+\item The Audio file is taken from:
+\begin{lstlisting}
+Audio/sing.wav
+\end{lstlisting}
+
+\item 
+A Python Code is written to achieve Audio Filtering 
+\lstinputlisting{./codes/filter.py}
+
+\item The audio file is analyzed using spectrogram using the online platform \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}.\\
+
+The orange, yellow regions have high amplitudes and purple small amplitudes.
+
+\begin{figure}[ht]
+    \includegraphics[width=0.8\columnwidth]{figs/Spectogram.png}
+    \caption{Spectrogram of the audio file before Filtering}
+    \label{fig:before_filter_plot}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[width=0.8\columnwidth]{figs/Filtered_Spectogram.png}
+    \caption{Spectrogram of the audio file after Filtering}
+    \label{fig:after_filter_plot}
+\end{figure}
+
+\end{enumerate}
+
+\section{Difference Equation}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\item Let
+\begin{equation}
+x\brak{n} = \cbrak{\underset{\uparrow}{1},2,3,4,2,1} \label{prob:2.1}
+\end{equation}
+Sketch $x\brak{n}$. 
+
+\item Let
+\begin{multline}
+y\brak{n} + \frac{1}{2}y\brak{n - 1} = x\brak{n} + x\brak{n-2}, 
+\\
+y\brak{n} = 0, n < 0 \label{prob:2.2}
+\end{multline}
+Sketch $y\brak{n}$.\\
+
+\solution The following C code generates $y\brak{n}$:
+\begin{lstlisting}
+codes/gen.c
+\end{lstlisting}
+This python code plots $x\brak{n}$ and $y\brak{n}$:
+\begin{lstlisting}
+codes/x_n.py
+\end{lstlisting}
+
+\begin{figure}[ht]
+    \includegraphics[width=0.8\columnwidth]{figs/x_n.png}
+    \caption{Plot of $x\brak{n}$}
+\end{figure}
+
+\begin{figure}[ht]
+    \includegraphics[width=0.8\columnwidth]{figs/y_n.png}
+    \caption{Plot of $y\brak{n}$}
+\end{figure}
+\end{enumerate}
+
+\section{Z-Transform}
+
+\begin{enumerate}[label=\thesection.\arabic*]
+\item The $Z$-transform of $x(n)$ is defined as
+%
+\begin{equation}
+\label{eq:z_trans}
+X(z)={\mathcal {Z}}\{x(n)\}=\sum _{n=-\infty }^{\infty }x(n)z^{-n}
+\end{equation}
+%
+Show that
+\begin{equation}
+\label{eq:shift1}
+{\mathcal {Z}}\{x(n-1)\} = z^{-1}X(z)
+\end{equation}
+and find
+\begin{equation}
+	{\mathcal {Z}}\{x(n-k)\} 
+\end{equation}
+
+\solution From \eqref{eq:z_trans},
+\begin{align}
+{\mathcal {Z}}\{x(n-k)\} &=\sum _{n=-\infty }^{\infty }x(n-k)z^{-n}
+\\
+&=\sum _{n=-\infty }^{\infty }x(n)z^{-n-k} \\
+&= z^{-k}\sum _{n=-\infty }^{\infty }x(n)z^{-n} \label{eq:z_shift}
+\end{align}
+Substituting $k = 1$ we get \eqref{eq:shift1}. 
+
+\item Find
+%
+\begin{equation}
+H(z) = \frac{Y(z)}{X(z)}
+\end{equation}
+from  \eqref{prob:2.2} assuming that the $Z$-transform is a linear operation.\\
+\solution  Applying \eqref{eq:z_shift} in \eqref{prob:2.2},
+\begin{align}
+Y(z) + \frac{1}{2}z^{-1}Y(z) &= X(z)+z^{-2}X(z)\\
+\implies \frac{Y(z)}{X(z)} &= \frac{1 + z^{-2}}{1 + \frac{1}{2}z^{-1}}
+\label{eq:freq_resp}
+\end{align}
+
+\item Find the Z transform of 
+\begin{equation}
+    \delta(n) =
+    \begin{cases}
+        1 & n = 0\\
+        0 & \text{otherwise}
+    \end{cases}
+\end{equation}
+and show that the $Z$-transform of
+\begin{equation}
+\label{eq:unit_step}
+u\brak{n} =
+    \begin{cases}
+    1 & n \ge 0\\
+    0 & \text{otherwise}
+    \end{cases}
+\end{equation}
+is
+\begin{equation}
+    U(z) = \frac{1}{1-z^{-1}}, \quad \abs{z} > 1
+\end{equation}
+
+\solution It is easy to show that
+\begin{equation}
+\delta(n) \system{Z} 1
+\end{equation}
+and from \eqref{eq:unit_step},
+\begin{align}
+U(z) &= \sum _{n= 0}^{\infty}z^{-n}
+\\
+&=\frac{1}{1-z^{-1}}, \quad \abs{z} > 1
+\end{align}
+using the formula for the sum of an infinite geometric progression.
+
+\item Show that 
+\begin{equation}
+    a^nu(n) \system{Z} \frac{1}{1-az^{-1}} \quad \abs{z} > \abs{a} \label{eq:anun}
+\end{equation}
+\solution 
+\begin{align}
+	a^nu(n) &\system{Z} \sum_{n = 0}^{\infty}\brak{az^{-1}}^n \\
+			&= \frac{1}{1-az^{-1}} \quad \abs{z} > \abs{a}
+\end{align}
+
+\item 
+Let
+\begin{equation}
+    H\brak{e^{\j \omega}} = H\brak{z = e^{\j \omega}}.
+\end{equation}
+Plot $\abs{H\brak{e^{\j \omega}}}$.  Comment.  $H(e^{\j \omega})$ is known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.\\
+
+\solution The following code plots the magnitude of transfer function.
+\begin{lstlisting}
+https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/3.5.py
+\end{lstlisting}
+Substituting $z = e^{j \omega}$ in \eqref{eq:freq_resp}, we get
+\begin{align}
+	\abs{H\brak{e^{j\omega}}} &= \abs{\frac{1 + e^{-2j\omega}}{1 + \frac{1}{2}e^{-j\omega}}} \\
+	&= \sqrt{\frac{\brak{1 + \cos{2\omega}}^2 + \brak{\sin{2\omega}}^2}{\brak{1 + \frac{1}{2}\cos{\omega}}^2 + \brak{\frac{1}{2}\sin{\omega}}^2}}\\
+	\therefore \abs{H\brak{e^{j\omega}}} &= \frac{4|\cos{\omega}|}{\sqrt{5 + 4\cos{\omega}}}
+\end{align}
+\begin{align}
+	\abs{H\brak{e^{j\brak{\omega + 2\pi}}}} &= \frac{4|\cos\brak{\omega + 2\pi}|}{\sqrt{5 + 4\cos\brak{\omega + 2\pi}}} \\
+	&= \frac{4|\cos{\omega}|}{\sqrt{5 + 4\cos{\omega}}} \\
+	&= \abs{H\brak{e^{j\omega}}}	
+\end{align}
+Therefore its fundamental period is $2\pi$ , which verifies that DTFT of a signal is always periodic.
+
+\begin{figure}[ht]
+    \includegraphics[width=0.8\columnwidth]{figs/H_jw.png}
+    \caption{Plot of $H\brak{e^{j\omega}}$}
+\end{figure}
+\end{enumerate}
+
+\section{Impulse Response}
+\begin{enumerate}[label=\thesection.\arabic*]
+\item \label{prob:impulse_resp}
+Find an expression for $h(n)$ using $H(z)$, given that 
+\begin{equation}
+    h(n) \system{Z} H(z)
+    \label{eq:impulse_resp}
+\end{equation}
+and there is a one to one relationship between $h(n)$ and $H(z)$. $h(n)$ is known as the {\em impulse response} of the
+system defined by \eqref{prob:2.2}.\\
+\solution From \eqref{eq:freq_resp},
+\begin{align}
+H(z) &= \frac{1}{1 + \frac{1}{2}z^{-1}} + \frac{ z^{-2}}{1 + \frac{1}{2}z^{-1}}\\
+\implies h(n) &= \brak{-\frac{1}{2}}^{n}u(n) + \brak{-\frac{1}{2}}^{n-2}u(n-2)
+\end{align}
+using \eqref{eq:anun} and \eqref{eq:z_shift}.
+
+\item Sketch $h(n)$. Is it bounded? Convergent? 
+\\
+\solution The following code plots $h\brak{n}$ 
+\begin{lstlisting}
+codes/H_jw.py
+\end{lstlisting}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/h_n.png}
+    \caption{Plot of $h(n)$ as the inverse of $H(z)$}
+    \label{fig:hn}
+\end{figure}
+
+\item The system with $h(n)$ is defined to be stable if
+\begin{equation}
+\sum_{n=-\infty}^{\infty}h(n) < \infty \label{eq:stabilty_condn}
+\end{equation}
+Is the system defined by \eqref{prob:2.2} stable for the impulse response in \eqref{eq:impulse_resp}?\\
+\solution For stable system \eqref{eq:stabilty_condn} should converge.\\
+By using ratio test
+\begin{align}
+    \lim_{n \to \infty}\abs{\frac{h(n + 1)}{h(n)}} &< 1 \\
+\end{align}
+For large $n$ 
+\begin{align}
+    u\brak{n} = u\brak{n-2} = 1
+\end{align}
+\begin{align}
+  \lim_{n \to \infty}  \brak{\frac{h(n + 1)}{h(n)}} = 1/2 < 1
+\end{align}
+Therefore it converges. Hence it is stable.
+
+\item 
+Compute and sketch $h(n)$ using 
+\begin{equation}
+    h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2) \label{eq:iir_filter_h}
+\end{equation}
+This is the definition of $h(n)$.\\
+\solution\\
+Definition of $h\brak{n}$: The output of the system when $\delta\brak{n}$ is given as input.\\
+
+The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
+\ref{fig:hn}. 
+
+\begin{lstlisting}
+codes/h_ir.py
+\end{lstlisting}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/h_n.png}
+    \caption{$h(n)$ from the definition is same as \figref{fig:hn}}
+    \label{fig:hndef}
+\end{figure}
+
+\item Compute 
+%
+\begin{equation}
+\label{eq:convolution}
+y(n) = x(n)*h(n) = \sum_{n=-\infty}^{\infty}x(k)h(n-k)
+\end{equation}
+%
+Comment. The operation in \eqref{eq:convolution} is known as
+{\em convolution}.
+%
+\\
+\solution The following code plots Fig. \ref{fig:ynconv}. Note that this is the same as 
+$y(n)$ in  Fig. 
+\ref{fig:xnyn}. 
+%
+\begin{lstlisting}
+codes/h_ir.py
+\end{lstlisting}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/conv_y.png}
+    \caption{$y(n)$ from the definition of convolution}
+    \label{fig:ynconv}
+\end{figure}
+
+\item Show that
+\begin{equation}
+y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
+\end{equation}
+\solution
+In \eqref{eq:convolution}, we substitute $k = n - k$ to get
+\begin{align}
+    y\brak{n} &= \sum_{k=-\infty}^{\infty}x\brak{k}h\brak{n - k} \\
+              &= \sum_{n - k=-\infty}^{\infty}x\brak{n - k}h\brak{k} \\
+    \therefore y\brak{n} &= \sum_{k=-\infty}^{\infty}x\brak{n - k}h\brak{k}
+\end{align}
+\end{enumerate}
+
+\section{DFT and FFT}
+\begin{enumerate}[label=\thesection.\arabic*]
+\item
+Compute
+\begin{equation}
+X(k) \define \sum _{n=0}^{N-1}x(n) e^\frac{-\j2\pi kn}{N} \quad k = 0,1,\dots, N-1
+\end{equation}
+and $H(k)$ using $h(n)$.
+\item Compute 
+\begin{equation}
+Y(k) = X(k)H(k)
+\label{eq:fp}
+\end{equation}
+\item Compute
+\begin{equation}
+y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^\frac{\j 2\pi kn}{N} \quad n = 0,1,\dots, N-1
+\label{eq:inv-ft}
+\end{equation}
+\solution The above three questions are solved using the code below.
+\begin{lstlisting}
+codes/dft.py
+\end{lstlisting}
+
+\item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
+\solution The solution of this question can be found in the code below.
+\begin{lstlisting}
+codes/fft.py
+\end{lstlisting}
+This code verifies the result by plotting the obtained result with the result obtained by IDFT.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/ft_comp.png}
+    \caption{$y(n)$ obtained from IDFT and IFFT is plotted and verified}
+    \label{fig:yn_verf_5.4}
+\end{figure}
+
+\item Wherever possible, express all the above equations as matrix equations.\\
+\solution The DFT matrix is defined as : 
+\begin{align}
+	\mtx{W} = 
+	\begin{pmatrix}
+		\omega^0 & \omega^0 & \ldots & \omega^0 \\
+		\omega^0 & \omega^1 & \ldots & \omega^{N - 1} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\omega^0 & \omega^{N - 1} & \ldots & \omega^{(N -1)(N - 1)}
+	\end{pmatrix}
+\end{align}
+where $\omega=e^{-\frac{j2\pi}{N}}$ . Now any DFT equation can be written as
+\begin{align}
+    \mtx{X} = \mtx{W}\mtx{x}
+\end{align}
+\noindent where
+\begin{align}
+	\mtx{x} = 
+	\begin{pmatrix}
+		x(0) \\ x(1) \\ \vdots \\ x(n - 1)
+	\end{pmatrix}
+\end{align}
+\begin{align}
+	\mtx{X} = 
+	\begin{pmatrix}
+		X(0) \\ X(1) \\ \vdots \\ X(n - 1)
+	\end{pmatrix}
+\end{align}
+Thus we can rewrite  \eqref{eq:fp} as:
+\begin{align}
+	\mtx{Y} = \mtx{X}\odot\mtx{H} = \brak{\mtx{W}\mtx{x}}\odot\brak{\mtx{W}\mtx{h}}
+\end{align}
+where the $\odot$ represents the Hadamard product which performs element-wise multiplication.
+
+\end{enumerate}
+
+\section{\underline{EXERCISES}}
+\noindent Answer the following questions by looking at the python code in Problem \ref{prob:audio_filter_problem}.
+
+\begin{enumerate}[label=\thesection.\arabic*]
+\item
+The command
+\begin{lstlisting}
+	output_signal = signal.lfilter(b, a, input_signal)
+	\end{lstlisting}
+in Problem \ref{prob:audio_filter} is executed through the following difference equation
+\begin{equation}
+\label{eq:iir_filter_gen}
+    \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k} 
+\end{equation}
+where the input signal is $x(n)$ and the output signal is $y(n)$ with initial values all 0. Replace
+\textbf{signal. filtfilt} with your own routine and verify.\\
+
+\solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
+\begin{lstlisting}
+https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.1.py 
+\end{lstlisting}
+
+% a = [ 1.         -1.96842779  1.73586071 -0.72447083  0.1203896 ]
+% b = [0.01020948 0.04083792 0.06125688 0.04083792 0.01020948]
+
+\item Repeat all the exercises in the previous sections for the above $a$ and $b$.\\
+\solution The code in \ref{prob:audio_filter_problem} generates the values of $a$ and $b$  which can be used to generate a difference equation.\\
+And,
+\begin{align}
+    M &= 5\\
+    N&=5
+\end{align}
+From \ref{eq:iir_filter_gen} 
+\begin{align}
+    &a\brak{0}y\brak{n} + a\brak{1}y\brak{n-1}+a\brak{2}y\brak{n-2}+a\brak{3}\\ \notag &y\brak{n-3} + a\brak{4}y\brak{n-4} =   b\brak{0}x\brak{n} + b\brak{1}x\brak{n-1}\\ \notag &+b\brak{2}x\brak{n-2}+b\brak{3}x\brak{n-3} + b\brak{4}x\brak{n-4} 
+\end{align}
+Difference Equation is given by :
+\begin{align}
+	&y(n) - \brak{1.968}y(n - 1) + \brak{1.735}y(n - 2) \nonumber \\
+	&- \brak{0.724}y(n - 3) + \brak{0.120}y(n - 4) \nonumber \\
+	&= \brak{0.01020}x(n) + \brak{0.0408}x(n - 1) \nonumber \\
+	&+ \brak{0.06125}x(n - 2) + \brak{0.0408}x(n - 3) \nonumber \\
+	&+ \brak{0.01020}x(n - 4)
+\end{align}
+From \eqref{eq:iir_filter_gen} 
+\begin{align}
+    H(z) &= \frac{b_0 + b_1 z^{-1} + b_2 z^{-2} + \ldots + b_M z^{-N}}{a_0 + a_1 z^{-1} + a_2 z^{-2} + \ldots + a_N z^{-M}}\\
+    H(z) &= \frac{\sum_{k = 0}^{N}b(k)z^{-k}}{\sum_{k = 0}^{M}a(k)z^{-k}} \label{eq:trans-func}
+\end{align}
+Partial fraction on \eqref{eq:trans-func} can be generalised as:
+\begin{align}
+    H\brak{z}&= \sum_{i}\frac{r(i)}{1 - p(i)z^{-1}} + \sum_{j}k(j)z^{-j}
+	\label{eq:trans-func-pfe}
+\end{align}
+Now,
+\begin{align}
+    a^{n}u\brak{n} \system{Z} \frac{1}{1-az^{-1}} \label{eq:res-1}\\
+    \delta\brak{n-k} \system{Z} z^{-k}\label{eq:res-2}
+\end{align}
+Taking inverse z transform of \eqref{eq:trans-func-pfe} by using \eqref{eq:res-1} and \eqref{eq:res-2}
+\begin{align}
+h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
+	\label{eq:h-n-expr}
+\end{align}
+The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plots $h\brak{n}$
+\begin{lstlisting}
+codes/poly.py
+\end{lstlisting}
+\input{tables/table.tex}
+
+\textbf{Stability of h(n)}:\\
+According to \eqref{eq:stabilty_condn}
+\begin{align}
+H\brak{z} &= \sum_{n = 0}^{\infty} h\brak{n}z^{-n}\\
+H(1)&= \sum_{n = 0}^{\infty}h(n)  = \frac{\sum_{k = 0}^{N}b(k)}{\sum_{k = 0}^{M}a(k)}< \infty
+\end{align}
+As both $a\brak{k}$ and $b\brak{k}$ are finite length sequences they converge.\\
+The below code plots Filter frequency response
+\begin{lstlisting}
+codes/response.py
+\end{lstlisting}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\columnwidth]{figs/freq_res.png}
+\caption{Frequency Response of Digital Filter}
+\label{fig:H(w)_6}
+\end{figure}
+
+The below code plots the Pole-Zero Plot of the frequency response.
+\begin{lstlisting}
+codes/pole.py
+\end{lstlisting}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\columnwidth]{figs/pole.png}
+\caption{There are complex poles. So $h\brak{n}$ should be damped sinusoid.}
+\label{fig:pole_zero_6.2}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/filter_h_n.png}
+    \caption{h(n) of Audio Filter.It is a damped sinusoid.}
+    \label{fig:6.2_hn}
+\end{figure}
+
+\item Implement your own fft routine in C and call this fft in python.\\
+
+\solution The below C code computes FFT of a given sequence.
+\begin{lstlisting}
+codes/fft.c
+\end{lstlisting}
+The C function involved in computing the FFT is called in the below python code and the result is computed.\\
+
+Before executing the  python code. Execute the following command.
+\begin{lstlisting}
+gcc -shared -o fft.so -fPIC fft.c
+\end{lstlisting}
+
+\begin{lstlisting}
+codes/c_fft.py
+\end{lstlisting}
+
+
+\item Find the time complexities of computing y(n)
+using FFT/IFFT and convolution and Compare.\\
+\solution  The time required to compute y(n) using these two methods is calculated and the data is stored in a text file using the below C code.
+
+\begin{lstlisting}
+codes/fft_time.c
+\end{lstlisting}
+The below python code extracts the data from these text files and plots Time vs $n$ for comparison.
+\begin{lstlisting}
+codes/time_plot.py
+\end{lstlisting}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\columnwidth]{figs/execplot.png}
+\caption{The Complexity of FFT+IFFT method is $ O(nlogn)$ where as by convolution is $O(n^2)$}
+\label{fig:time_complexity}
+\end{figure}
+
+
+\item What is the sampling frequency of the input signal?\\
+\solution The Sampling Frequency is 44.1KHz
+\item
+What is type, order and  cutoff-frequency of the above butterworth filter
+\\
+\solution The given butterworth filter is lowpass with order=4 and cutoff-frequency=1kHz.
+
+\item
+Modify the code with different input parameters and get the best possible output.
+
+\solution
+A better filtering was found on setting the order of the filter to be 5.
+
+
+\end{enumerate}
+
+\end{document}
