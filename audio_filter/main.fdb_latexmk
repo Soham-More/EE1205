@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1712339147 "/home/sanji/Uni/EE1205/audio_filter/main.tex" "main.pdf" "main" 1712339148
+["pdflatex"] 1712340625 "/home/sanji/Uni/EE1205/audio_filter/main.tex" "main.pdf" "main" 1712340626
   "/etc/texmf/web2c/texmf.cnf" 1704303216 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/sanji/Uni/EE1205/audio_filter/main.tex" 1712339147 18363 43cc0dfd5f3fd78c15553ea0ec2f8f97 ""
+  "/home/sanji/Uni/EE1205/audio_filter/main.tex" 1712340623 19306 86af40cc464a8a33c49c2b7e96c76e04 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -276,9 +276,9 @@
   "figs/x_n.png" 1712083171 11231 a81595b7fa4a8d3b25f8b13302e18fe1 ""
   "figs/y_n.png" 1712083171 10913 17f19407bf8a1f02b809c56fab03cd01 ""
   "gvv.sty" 1708252742 5178 c355d3f45ac8ab8a2525839746a2ca97 ""
-  "main.aux" 1712339148 6882 744f5f4061fca9dcba0ac8990d408301 "pdflatex"
-  "main.out" 1712339148 673 c50489ac4b237cca6623115df81d02f2 "pdflatex"
-  "main.tex" 1712339147 18363 43cc0dfd5f3fd78c15553ea0ec2f8f97 ""
+  "main.aux" 1712340626 7024 126c7ec60f9b230c9a93e9966eabdd51 "pdflatex"
+  "main.out" 1712340626 673 c50489ac4b237cca6623115df81d02f2 "pdflatex"
+  "main.tex" 1712340623 19306 86af40cc464a8a33c49c2b7e96c76e04 ""
   "tables/table.tex" 1712321115 612 0dba0e113c4906c1585ceb957ba73a28 ""
   (generated)
   "main.aux"

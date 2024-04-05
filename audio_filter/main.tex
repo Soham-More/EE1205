@@ -67,11 +67,11 @@
 
 \item The Audio file is taken from:
 \begin{lstlisting}
-Audio/sing.wav
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/audio/alt.wav
 \end{lstlisting}
 
 \item 
-A Python Code is written to achieve Audio Filtering 
+A Python Code is written to achieve Audio Filtering \label{prob:audio_filter_problem} \label{prob:audio_filter}
 \lstinputlisting{./codes/filter.py}
 
 \item The audio file is analyzed using spectrogram using the online platform \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}.\\
@@ -109,11 +109,11 @@ Sketch $y\brak{n}$.\\
 
 \solution The following C code generates $y\brak{n}$:
 \begin{lstlisting}
-codes/gen.c
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/gen.c
 \end{lstlisting}
 This python code plots $x\brak{n}$ and $y\brak{n}$:
 \begin{lstlisting}
-codes/x_n.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/x_n.py
 \end{lstlisting}
 
 \begin{figure}[ht]
@@ -222,7 +222,7 @@ Plot $\abs{H\brak{e^{\j \omega}}}$.  Comment.  $H(e^{\j \omega})$ is known as th
 
 \solution The following code plots the magnitude of transfer function.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/3.5.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/H_jw.py
 \end{lstlisting}
 Substituting $z = e^{j \omega}$ in \eqref{eq:freq_resp}, we get
 \begin{align}
@@ -264,7 +264,7 @@ using \eqref{eq:anun} and \eqref{eq:z_shift}.
 \\
 \solution The following code plots $h\brak{n}$ 
 \begin{lstlisting}
-codes/H_jw.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/H_jw.py
 \end{lstlisting}
 \begin{figure}[ht]
     \centering
@@ -305,7 +305,7 @@ The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig
 \ref{fig:hn}. 
 
 \begin{lstlisting}
-codes/h_ir.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/h_ir.py
 \end{lstlisting}
 
 \begin{figure}[!ht]
@@ -331,7 +331,7 @@ $y(n)$ in  Fig.
 \ref{fig:xnyn}. 
 %
 \begin{lstlisting}
-codes/h_ir.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/h_ir.py
 \end{lstlisting}
 \begin{figure}[ht]
     \centering
@@ -373,13 +373,13 @@ y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^\frac{\j 2\pi kn}{N} \
 \end{equation}
 \solution The above three questions are solved using the code below.
 \begin{lstlisting}
-codes/dft.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/dft.py
 \end{lstlisting}
 
 \item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
 \solution The solution of this question can be found in the code below.
 \begin{lstlisting}
-codes/fft.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/fft.py
 \end{lstlisting}
 This code verifies the result by plotting the obtained result with the result obtained by IDFT.
 
@@ -433,8 +433,8 @@ where the $\odot$ represents the Hadamard product which performs element-wise mu
 \item
 The command
 \begin{lstlisting}
-	output_signal = signal.lfilter(b, a, input_signal)
-	\end{lstlisting}
+output_signal = signal.filtfilt(b, a, input_signal)
+\end{lstlisting}
 in Problem \ref{prob:audio_filter} is executed through the following difference equation
 \begin{equation}
 \label{eq:iir_filter_gen}
@@ -445,7 +445,7 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 
 \solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.1.py 
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/lfilt.py
 \end{lstlisting}
 
 % a = [ 1.         -1.96842779  1.73586071 -0.72447083  0.1203896 ]
@@ -492,7 +492,7 @@ h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
 \end{align}
 The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plots $h\brak{n}$
 \begin{lstlisting}
-codes/poly.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/poly.py
 \end{lstlisting}
 \input{tables/table.tex}
 
@@ -505,7 +505,7 @@ H(1)&= \sum_{n = 0}^{\infty}h(n)  = \frac{\sum_{k = 0}^{N}b(k)}{\sum_{k = 0}^{M}
 As both $a\brak{k}$ and $b\brak{k}$ are finite length sequences they converge.\\
 The below code plots Filter frequency response
 \begin{lstlisting}
-codes/response.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/response.py
 \end{lstlisting}
 \begin{figure}[h!]
 \centering
@@ -516,7 +516,7 @@ codes/response.py
 
 The below code plots the Pole-Zero Plot of the frequency response.
 \begin{lstlisting}
-codes/pole.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/pole.py
 \end{lstlisting}
 \begin{figure}[ht]
 \centering
@@ -536,7 +536,7 @@ codes/pole.py
 
 \solution The below C code computes FFT of a given sequence.
 \begin{lstlisting}
-codes/fft.c
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/fft.c
 \end{lstlisting}
 The C function involved in computing the FFT is called in the below python code and the result is computed.\\
 
@@ -546,7 +546,7 @@ gcc -shared -o fft.so -fPIC fft.c
 \end{lstlisting}
 
 \begin{lstlisting}
-codes/c_fft.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/c_fft.py
 \end{lstlisting}
 
 
@@ -555,11 +555,11 @@ using FFT/IFFT and convolution and Compare.\\
 \solution  The time required to compute y(n) using these two methods is calculated and the data is stored in a text file using the below C code.
 
 \begin{lstlisting}
-codes/fft_time.c
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/fft_time.c
 \end{lstlisting}
 The below python code extracts the data from these text files and plots Time vs $n$ for comparison.
 \begin{lstlisting}
-codes/time_plot.py
+https://github.com/Soham-More/EE1205/blob/main/audio_filter/codes/time_plot.py
 \end{lstlisting}
 \begin{figure}[h!]
 \centering
