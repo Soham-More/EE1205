@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  14 APR 2024 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  14 APR 2024 23:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -923,7 +923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--178
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 16.
 )
-<figs/polezero.png, id=126, 462.528pt x 346.896pt>
+<figs/polezero.png, id=127, 462.528pt x 346.896pt>
 File: figs/polezero.png Graphic file (type png)
 <use figs/polezero.png>
 Package pdftex.def Info: figs/polezero.png  used on input line 196.
@@ -934,7 +934,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--206
  []
 
 [5]
-<figs/spec.png, id=144, 462.528pt x 346.896pt>
+<figs/spec.png, id=145, 462.528pt x 346.896pt>
 File: figs/spec.png Graphic file (type png)
 <use figs/spec.png>
 Package pdftex.def Info: figs/spec.png  used on input line 218.
@@ -944,7 +944,7 @@ Overfull \hbox (58.7106pt too wide) detected at line 243
 []
  []
 
-<figs/H_BP.png, id=161, 462.528pt x 346.896pt>
+<figs/H_BP.png, id=162, 462.528pt x 346.896pt>
 File: figs/H_BP.png Graphic file (type png)
 <use figs/H_BP.png>
 Package pdftex.def Info: figs/H_BP.png  used on input line 250.
@@ -954,18 +954,18 @@ Overfull \hbox (131.2089pt too wide) detected at line 264
 []
  []
 
-<figs/Digital_BP.png, id=178, 462.528pt x 346.896pt>
+<figs/Digital_BP.png, id=179, 462.528pt x 346.896pt>
 File: figs/Digital_BP.png Graphic file (type png)
 <use figs/Digital_BP.png>
 Package pdftex.def Info: figs/Digital_BP.png  used on input line 269.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
 [8 <./figs/H_BP.png>]
-<figs/FIR_ideal_w.png, id=187, 462.528pt x 346.896pt>
+<figs/FIR_ideal_w.png, id=188, 462.528pt x 346.896pt>
 File: figs/FIR_ideal_w.png Graphic file (type png)
 <use figs/FIR_ideal_w.png>
 Package pdftex.def Info: figs/FIR_ideal_w.png  used on input line 287.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-<figs/FIR_ideal_n.png, id=188, 462.528pt x 346.896pt>
+<figs/FIR_ideal_n.png, id=189, 462.528pt x 346.896pt>
 File: figs/FIR_ideal_n.png Graphic file (type png)
 <use figs/FIR_ideal_n.png>
 Package pdftex.def Info: figs/FIR_ideal_n.png  used on input line 293.
@@ -978,7 +978,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9 <./figs/digital_BP.png>] [10 <./figs/FIR_ideal_w.png>]
-<figs/FIR_kaiser_lp.png, id=210, 462.528pt x 346.896pt>
+<figs/FIR_kaiser_lp.png, id=211, 462.528pt x 346.896pt>
 File: figs/FIR_kaiser_lp.png Graphic file (type png)
 <use figs/FIR_kaiser_lp.png>
 Package pdftex.def Info: figs/FIR_kaiser_lp.png  used on input line 356.
@@ -988,7 +988,7 @@ Package pdftex.def Info: figs/FIR_kaiser_lp.png  used on input line 356.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./figs/FIR_ideal_n.png>]
-<figs/FIR_kaiser_bp.png, id=221, 462.528pt x 346.896pt>
+<figs/FIR_kaiser_bp.png, id=222, 462.528pt x 346.896pt>
 File: figs/FIR_kaiser_bp.png Graphic file (type png)
 <use figs/FIR_kaiser_bp.png>
 Package pdftex.def Info: figs/FIR_kaiser_bp.png  used on input line 386.
@@ -1005,18 +1005,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C2D8058AB543BC3B30F82EC98E695026;1717.
  ) 
 Here is how much of TeX's memory you used:
- 42444 strings out of 478287
- 982317 string characters out of 5849289
- 1496745 words of memory out of 5000000
- 59835 multiletter control sequences out of 15000+600000
- 508125 words of font info for 120 fonts, out of 8000000 for 9000
+ 42446 strings out of 478287
+ 982335 string characters out of 5849289
+ 1498745 words of memory out of 5000000
+ 59836 multiletter control sequences out of 15000+600000
+ 508443 words of font info for 121 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 115i,21n,118p,461b,1180s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (13 pages, 303443 bytes).
+ 115i,21n,118p,461b,1193s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (13 pages, 304665 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
+ 306 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  112 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
